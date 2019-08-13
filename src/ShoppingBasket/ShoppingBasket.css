@@ -2,8 +2,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10px;
-    
+    padding-top: 10px; 
 }
 
 .shopping-basket-container button {
@@ -11,7 +10,13 @@
     width: 100px;
     background: lightgray;
     color: darkslategray;
-  }
+    border:none;
+}
 
+.shopping-basket-container button:hover {
+    border: 1px darkslategrey solid;
+    background: darkslategray;
+    color: lightgray;
 
+}
 

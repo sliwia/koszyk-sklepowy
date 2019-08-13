@@ -1,0 +1,17 @@
+.shopping-basket-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    
+}
+
+.shopping-basket-container button {
+    height: 100px;
+    width: 100px;
+    background: lightgray;
+    color: darkslategray;
+  }
+
+
+

@@ -1,17 +1,19 @@
 import React from 'react';
 import { HeaderView } from './Header';
 import { ShoppingBasket } from './ShoppingBasket'
+import { Shop } from './Shop'
 import './App.css'
 
 export class App extends React.Component {
-    render() {
-  
-      return (
-        <div>
-          <HeaderView />
-          <ShoppingBasket />
-        </div>
-        
-      );
-    }
+  render() {
+
+    return (
+      <div>
+        <HeaderView />
+        <ShoppingBasket />
+        <Shop />
+      </div>
+      
+    );
   }
+}

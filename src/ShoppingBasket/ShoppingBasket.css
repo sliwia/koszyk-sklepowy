@@ -6,17 +6,30 @@
 }
 
 .shopping-basket-container button {
-    height: 100px;
-    width: 100px;
-    background: lightgray;
+    height: 50px;
+    width: 50px;
+    background: rgb(228, 226, 226);
     color: darkslategray;
     border:none;
 }
 
-.shopping-basket-container button:hover {
-    border: 1px darkslategrey solid;
-    background: darkslategray;
-    color: lightgray;
 
+
+@media screen and (min-width: 768px){
+    .shopping-basket-container button {
+        height: 80px;
+        width: 80px;
+    }
 }
-
+  
+@media screen and (min-width: 1200px){
+    .shopping-basket-container button {
+        height: 100px;
+        width: 100px;
+    }
+    .shopping-basket-container button:hover {
+        border: 1px darkslategrey solid;
+        background: darkslategray;
+        color: rgb(228, 226, 226);
+    }
+}

@@ -12,11 +12,11 @@ li {
     flex-flow: row;
     align-items: center;
     background: gray;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     box-shadow: 0 2px 2px black;
     font-size: 15pt;
     color:white;
-    padding: 5px;
+    padding: 5px ;
 }
 li:last-child {
     margin-bottom: 0;

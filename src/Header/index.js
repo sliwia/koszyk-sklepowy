@@ -1,8 +1,8 @@
 import React from 'react';
 import './Header.css';
-import '../MainCssFiles/Container.css'
 
-export function HeaderView() {
+
+export function Header() {
   return (
     <div className ="header-container">
       <div className="container titles-container">

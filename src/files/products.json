@@ -1,0 +1,30 @@
+
+{
+    "Products": {
+
+            "1":{
+                "product": "Jabłka",
+                "price": 10,
+                "photo": "jablka.jpg"
+                
+            },
+            "2":{
+                "product": "Gruszki",
+                "price": 11,
+                "photo": "gruszki.jpg"
+            },
+            "3":{
+                "product": "Banany",
+                "price": 12,
+                "photo": "banany.jpg"
+            },
+            "4":{
+                "product": "awokado",
+                "price": 13,
+                "photo": "awokado.jpg"
+            } 
+          
+    }
+      
+}
+  

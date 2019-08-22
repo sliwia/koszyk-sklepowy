@@ -1,17 +1,16 @@
 import React from 'react';
-import { HeaderView } from './Header';
-import { ShoppingBasket } from './ShoppingBasket'
-import { Shop } from './Shop'
+import { Header } from './Header';
+import { OpenBasketButton } from './OpenBasketButton'
+import { ProductsList } from './ProductsList'
 import './App.css'
 
 export class App extends React.Component {
   render() {
-
     return (
       <div>
-        <HeaderView />
-        <ShoppingBasket />
-        <Shop />
+        <Header />
+        <OpenBasketButton />
+        <ProductsList />
       </div>
       
     );

@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .shopping-basket-container {
     display:flex;
     flex-direction: column;
@@ -8,12 +10,10 @@
 .shopping-basket-container button {
     height: 50px;
     width: 50px;
-    background: rgb(228, 226, 226);
-    color: darkslategray;
+    background: $lightgrayColor;
+    color: $darkslategrayColor;
     border:none;
 }
-
-
 
 @media screen and (min-width: 768px){
     .shopping-basket-container button {
@@ -28,8 +28,8 @@
         width: 100px;
     }
     .shopping-basket-container button:hover {
-        border: 1px darkslategrey solid;
-        background: darkslategray;
-        color: rgb(228, 226, 226);
+        border: 1px $darkslategrayColor solid;
+        background: $darkslategrayColor;
+        color: $lightgrayColor;
     }
 }

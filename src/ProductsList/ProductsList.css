@@ -1,42 +1,51 @@
 ul, li {
-	list-style: none;
+  list-style: none;
 }
 
 ul {
-    background: rgb(228, 226, 226);
-    padding: 10px;
+  background: #e4e2e2;
+  padding: 10px;
 }
 
 li {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    background: gray;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 2px black;
-    font-size: 15pt;
-    color:white;
-    padding: 5px ;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: gray;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 2px 2px black;
+          box-shadow: 0 2px 2px black;
+  font-size: 15pt;
+  color: white;
+  padding: 5px;
 }
 
 li:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
 
 .product-img {
-    height: 100px;
-    width: 100px;
-    background-image: url('../files/jablka.jpg');
-    background-size: cover;
-    background-position: center; 
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-position: center;
 }
 
-.img2 {
-    background-image: url('../files/gruszki.jpg');
-}
 
 .product-title-price {
-    display: flex;
-    flex-flow: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
+/*# sourceMappingURL=ProductsList.css.map */

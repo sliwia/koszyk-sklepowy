@@ -1,12 +1,20 @@
 import React from 'react';
 
-export function AddElementToShoppingList(){
-    return(
+
+export class AddElementToShoppingList extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const liStyle = {backgroundImage: 'url(' + '../files/'+ this.props.photo + ')'};
+        console.log(liStyle)
+        return(
         <li>
-            <div className="product-img"></div>
-            <div class="product-title-price">
-                <span>Jabłka</span>
-                <span><i>Cena: 10zł</i></span>
+            <div className="product-img" style={liStyle} ></div>
+            <div className="product-title-price">
+                <span>{this.props.product}</span>
+                <span><i>Cena: {this.props.price}</i></span>
             </div>
             <div>
             <div>
@@ -17,6 +25,7 @@ export function AddElementToShoppingList(){
             </div>
             </div>
         </li>
-    );
+        );
+    }
 
 }

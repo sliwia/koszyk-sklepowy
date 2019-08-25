@@ -1,7 +1,7 @@
 import React from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import './OpenBasketButton.css'
+import './OpenBasketButton.scss'
 
 
 export function OpenBasketButton() {

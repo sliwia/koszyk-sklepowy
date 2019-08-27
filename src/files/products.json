@@ -5,23 +5,23 @@
             "1":{
                 "product": "Jabłka",
                 "price": 10,
-                "photo": "jablka.jpg"
+                "photo": "https://cdn.pixabay.com/photo/2016/11/29/03/23/apples-1867043_960_720.jpg"
                 
             },
             "2":{
                 "product": "Gruszki",
                 "price": 11,
-                "photo": "gruszki.jpg"
+                "photo": "https://cdn.pixabay.com/photo/2019/03/14/19/05/pears-4055660_960_720.jpg"
             },
             "3":{
                 "product": "Banany",
                 "price": 12,
-                "photo": "banany.jpg"
+                "photo": "https://cdn.pixabay.com/photo/2018/09/24/20/12/bananas-3700718_960_720.jpg"
             },
             "4":{
                 "product": "Awokado",
                 "price": 13,
-                "photo": "awokado.jpg"
+                "photo": "https://cdn.pixabay.com/photo/2015/12/08/00/25/pears-1081695_960_720.jpg"
             } 
           
     }

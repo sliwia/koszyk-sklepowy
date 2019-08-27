@@ -10,7 +10,7 @@ export class ProductsList extends React.Component {
     return (
       
       <div className="container">
-            <h2>Lista produktów dostępnych w sklepie</h2>
+
             <br></br>
             {
               //tu bedzie wyszukiwarka 

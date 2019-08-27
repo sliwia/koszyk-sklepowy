@@ -4,20 +4,22 @@ ul, li {
 }
 
 ul {
-    background: rgb(228, 226, 226);
+
     padding: 10px;
+
 }
 
 li {
     display: flex;
     flex-flow: row;
     align-items: center;
-    background:$grayColor;
+    background: #3E7598;
     margin-bottom: 10px;
-    box-shadow: 0 2px 2px black;
+    box-shadow: 0 1px 1px lightblue;
     font-size: 15pt;
-    color:$whiteColor;
-    padding: 5px ;
+    color: $whiteColor;
+    padding: 5px;
+
 }
 
 li:last-child {
@@ -28,14 +30,10 @@ li:last-child {
 .product-img {
     height: 100px;
     width: 100px;
-    background-image: url('../files/jablka.jpg');
     background-size: cover;
     background-position: center; 
 }
 
-.img2 {
-    background-image: url('../files/gruszki.jpg');
-}
 
 .product-title-price {
     display: flex;

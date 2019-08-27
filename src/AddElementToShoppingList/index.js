@@ -7,7 +7,7 @@ export class AddElementToShoppingList extends React.Component {
     }
 
     render() {
-        const liStyle = {backgroundImage: 'url(' + '../files/'+ this.props.photo + ')'};
+        const liStyle = {backgroundImage: 'url(' + this.props.photo + ')'};
         console.log(liStyle)
         return(
         <li>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './AddElementToShoppingList.scss';
 
 
 export class AddElementToShoppingList extends React.Component {
@@ -8,23 +9,17 @@ export class AddElementToShoppingList extends React.Component {
 
     render() {
         const liStyle = {backgroundImage: 'url(' + this.props.photo + ')'};
-        console.log(liStyle)
         return(
-        <li>
+        <div className="grid-container--item">
             <div className="product-img" style={liStyle} ></div>
-            <div className="product-title-price">
                 <span>{this.props.product}</span>
-                <span><i>Cena: {this.props.price}</i></span>
-            </div>
-            <div>
-            <div>
-                <input type="number" name="quantity" placeholder="Ilość [szt.]"></input>
+                <span>Cena: {this.props.price}</span>
                 <button>
                     Dodaj
                 </button>
-            </div>
-            </div>
-        </li>
+
+
+        </div>
         );
     }
 

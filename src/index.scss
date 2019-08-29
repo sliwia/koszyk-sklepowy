@@ -1,0 +1,28 @@
+@import './variables.scss';
+* {
+  margin: 0 auto;
+}
+
+body{
+  // background: $mainBackgroundColor background-image: url("https://cdn.pixabay.com/photo/2018/03/21/10/01/desktop-3246124_960_720.jpg");;
+  background-image: url("https://cdn.pixabay.com/photo/2015/05/15/14/52/water-768745_960_720.jpg");
+  background-size: cover;
+  background-position: center; 
+}
+
+.container {
+  width: 96%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px){
+  .container {
+      width: 720px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .container {
+      width: 960px;
+  }
+}

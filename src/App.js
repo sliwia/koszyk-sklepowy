@@ -1,7 +1,7 @@
 import React from 'react';
-import { Header } from './Header';
-import { OpenBasketButton } from './OpenBasketButton'
-import { ProductsList } from './ProductsList'
+import { Header } from './Header/Header';
+import { OpenBasketButton } from './OpenBasketButton/OpenBasketButton'
+import { ProductsList } from './ProductsList/ProductsList'
 import './App.scss'
 
 export class App extends React.Component {

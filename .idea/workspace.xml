@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="76b6d478-6a9c-48f8-bdab-0e5cc6e2b9be" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddElementToShoppingList/AddElementToShoppingList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddElementToShoppingList/AddElementToShoppingList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddElementToShoppingList/AddElementToShoppingList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddElementToShoppingList/AddElementToShoppingList.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBasketButton/OpenBasketButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBasketButton/OpenBasketButton.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProductsList/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductsList/ProductsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +51,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -54,6 +62,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567107714025</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Poprawki w wyglądzie kafli">
+      <created>1567144735201</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1567144735201</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -188,17 +204,12 @@
     <MESSAGE value="Dodanie sassa, gotowe komponenty dodające elementy do listy, json z listą produktów" />
     <MESSAGE value="Poprawki w komponentach" />
     <MESSAGE value="Zmiana kncepcji listy produktów. Pobieranie produktów z testowego API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zmiana kncepcji listy produktów. Pobieranie produktów z testowego API" />
+    <MESSAGE value="Poprawki w wyglądzie kafli" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poprawki w wyglądzie kafli" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Shop/index.js" />
-    <entry file="file://$PROJECT_DIR$/src/ProductsList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductsList/index.js" />
     <entry file="file://$PROJECT_DIR$/src/files/products.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">

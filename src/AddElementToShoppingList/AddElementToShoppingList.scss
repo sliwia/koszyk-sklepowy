@@ -1,4 +1,5 @@
 @import '../variables.scss';
+
 .grid-container--item {
     content: '';
     position: relative;
@@ -26,4 +27,23 @@
     margin-bottom: 20%; 
 }
 
+.btn-add-product {
+    width: 30px;
+    height: 30px;
+    color: $darkslategrayColor;
+    background: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-add-product:hover {
+    color: white;
+    background: $darkslategrayColor;
+    transform: translateY(-3px);
+    transform: scale(1.2);
+  }
 

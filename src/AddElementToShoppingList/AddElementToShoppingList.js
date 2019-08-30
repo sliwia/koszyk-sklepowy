@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import './AddElementToShoppingList.scss';
 
 
@@ -15,13 +17,10 @@ export class AddElementToShoppingList extends React.Component {
                 <div className="product-img" style={liStyle} ></div>
                 <span>{this.props.product}</span>
                 <span>Cena: {this.props.price}</span>
-                <button>
-                    Dodaj
+                <button className="btn-add-product">
+                    <FontAwesomeIcon icon={ faPlus } />
                 </button>
             </div>
-                
-
-
         </div>
         );
     }

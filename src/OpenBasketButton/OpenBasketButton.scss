@@ -13,21 +13,21 @@
     background: $lightgrayColor;
     color: $darkslategrayColor;
     border:none;
-
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .shopping-basket-container button {
         height: 80px;
         width: 80px;
     }
 }
   
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
     .shopping-basket-container button {
         height: 100px;
         width: 100px;
     }
+    
     .shopping-basket-container button:hover {
         border: 1px $darkslategrayColor solid;
         background: $darkslategrayColor;

@@ -22,17 +22,11 @@ export class ProductsList extends React.Component {
     }
     
   render() {
-    
     return (
 
       <div className="container">
-
-            <br></br>
-
-            { console.log(this.state.products)}
             <div className="grid-container">
              {
-             
               Object.entries(this.state.products)
               .map((listValue, index) =>{
                 var product = listValue[1].product;

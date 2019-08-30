@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { AddElementToShoppingList } from '../AddElementToShoppingList/AddElementToShoppingList';
 import './ProductsList.scss';
-// import { Products } from '../files/products.json';
+
 const API_URL = 'https://api.mockaroo.com/api/ad8dc0f0?count=16&key=fc19d980';
 
 
@@ -14,8 +14,7 @@ export class ProductsList extends React.Component {
     }
   }
   componentDidMount() {
-    const url = `${API_URL}`;
-    axios.get(url).then(response => response.data)
+    axios.get(API_URL).then(response => response.data)
     .then((data) => {
       this.setState({ products: data });
       })
@@ -24,18 +23,11 @@ export class ProductsList extends React.Component {
   render() {
     return (
       <div className="container">
-            <div className="grid-container">
-             {
-              Object.entries(this.state.products)
-              .map((listValue, index) =>{
-                var product = listValue[1].product;
-                var price = listValue[1].price;
-                var photo = listValue[1].photo;
-                return <AddElementToShoppingList product={product} price={price} photo={photo} key={index}/>;
-            
-              })
-            } 
-            </div>
+          <div className="grid-container">
+          {
+            this.state.products.map(elList => <AddElementToShoppingList product={elList.product} price={elList.price} photo={elList.photo} key={elList.id}/> )
+          } 
+          </div>
       </div>
     );
   }

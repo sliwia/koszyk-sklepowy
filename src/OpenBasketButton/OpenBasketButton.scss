@@ -26,6 +26,8 @@
     .shopping-basket-container button {
         height: 100px;
         width: 100px;
+        text-transform: uppercase;
+        animation: shadow-pulse 1s infinite;
     }
     
     .shopping-basket-container button:hover {
@@ -33,4 +35,15 @@
         background: $darkslategrayColor;
         color: $lightgrayColor;
     }
+
+    @keyframes shadow-pulse {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+        }
+        100% {
+            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+        }
+    }
+
+        
 }

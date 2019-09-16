@@ -1,13 +1,28 @@
 import React from 'react';
+import { Icon, Input, Button } from 'antd';
 import './Header.scss';
 
 
-export function Header() {
+
+export const Header = () => {
+  
   return (
     <div className ="header-container">
-      <div className="container titles-container">
-          <h1 >Zrób zakupy !</h1>
-          <h2>Sprawdź co masz w koszyku:</h2>
+      <div className="login-container">
+        <Input
+          prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
+          placeholder="Login"
+        />
+
+        <Input
+            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
+            type="password"
+            placeholder="Hasło"
+        />
+
+        <Button className="log-btn" htmlType="submit">
+            Zaloguj
+        </Button>
       </div>
     </div>
   );

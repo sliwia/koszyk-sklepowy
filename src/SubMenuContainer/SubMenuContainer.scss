@@ -1,0 +1,36 @@
+@import '../variables.scss';
+
+.sub-menu-container {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    color: $whiteColor;
+    background: $menuColor;
+    font-size: 18pt;
+    font-weight: 400;
+    
+}
+
+.sub-menu-container div:nth-of-type(3) {
+    background: $menuDarkColor;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $mainBackgroundColor;
+    height: 100px;
+    padding-bottom: 40px;
+}
+
+.search-container {
+    padding:5px;
+}
+
+.search-btn {
+    height: 0;
+    padding: 0 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    background: $mainBackgroundColor;
+}

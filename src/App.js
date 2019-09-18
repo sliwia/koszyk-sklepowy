@@ -1,14 +1,17 @@
-import React from 'react';
-import { Header } from './Header/Header';
-import { SubMenuContainer } from './SubMenuContainer/SubMenuContainer'
-import 'antd/dist/antd.css';
-import './App.scss'
+import React from "react";
+import "antd/dist/antd.css";
+import "./App.scss";
+
+import { Header } from "./Header/Header";
+import { SubMenuContainer } from "./SubMenuContainer/SubMenuContainer";
+import { ProductsList } from "./ProductsList/ProductsList";
 
 export const App = () => {
-    return (
-      <>
+  return (
+    <>
       <Header />
       <SubMenuContainer />
-      </>
-    );
-}
+      <ProductsList />
+    </>
+  );
+};

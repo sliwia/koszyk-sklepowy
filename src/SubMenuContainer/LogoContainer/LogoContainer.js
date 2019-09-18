@@ -6,7 +6,7 @@ import Logo from '../../files/groceries.png';
 export const LogoContainer = () => {
     return (
     <>
-        <div class="logo-container"><img src={ Logo } width="100" width="100" alt="website logo" /></div>     
+        <div class="logo-container"><img src={ Logo } width="100" height="100" alt="website logo" /></div>     
     </>
     );
 }

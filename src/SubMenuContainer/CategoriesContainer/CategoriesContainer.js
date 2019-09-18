@@ -8,12 +8,12 @@ export const CategoriesContainer = () => {
     <>
         <div className="item-submenu-container">
             <div className="item-categories" >Kategorie <Icon type="down" /></div>
-            <div className="submenu-categories">
-                <div><Icon type="minus" /> Owoce</div>
-                <div><Icon type="minus" /> Warzywa</div>
-                <div><Icon type="minus" /> Nabiał</div>
-                <div><Icon type="minus" /> Soki</div>
-            </div>
+                <div className="submenu-categories">
+                    {/* todo: tu będą checkboxy z kategoriami */}
+                    {/* <input type="checkbox" name="warzywa" value="Warzywa"> Warzywa</input>
+                    <input type="checkbox" name="nabial" value="Nabiał"> Nabiał</input>
+                    <input type="checkbox" name="soki" value="Soki"> Soki</input> */}  
+                </div>
         </div>
     </>
     );

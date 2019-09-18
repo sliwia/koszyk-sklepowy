@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b6d478-6a9c-48f8-bdab-0e5cc6e2b9be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ComponentsUI/Button/Button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComponentsUI/Button/Button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComponentsUI/Checkbox/Checkbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComponentsUI/Checkbox/Checkbox.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComponentsUI/InputWithIcon/InputWithIcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ComponentsUI/InputWithIcon/InputWithIcon.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubMenuContainer/CategoriesContainer/CategoriesContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubMenuContainer/CategoriesContainer/CategoriesContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubMenuContainer/CategoriesContainer/CategoriesContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubMenuContainer/CategoriesContainer/CategoriesContainer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubMenuContainer/ShoppingBasketContainer/ShoppingBasketContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubMenuContainer/ShoppingBasketContainer/ShoppingBasketContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubMenuContainer/ShoppingBasketContainer/ShoppingBasketContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubMenuContainer/ShoppingBasketContainer/ShoppingBasketContainer.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -57,7 +67,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -86,6 +95,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568653969478</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Kosz sklepowy plan komponentóww">
+      <created>1568813946135</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1568813946135</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -259,7 +276,8 @@
     <MESSAGE value="Poprawki po code review" />
     <MESSAGE value="Animacja w buttonie kosz" />
     <MESSAGE value="Koz sklepowy - dodany nowy header z polami logowania, plan submenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Koz sklepowy - dodany nowy header z polami logowania, plan submenu" />
+    <MESSAGE value="Kosz sklepowy plan komponentóww" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kosz sklepowy plan komponentóww" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Shop/index.js" />
@@ -295,7 +313,7 @@
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Icon } from 'antd';
 import './ShoppingBasketContainer.scss';
-
+import { Button } from '../../ComponentsUI/Button/Button';
 
 
 export const ShoppingBasketContainer = () => {
     return (
     <>
     <div className="item-submenu-container">
-        <button><Icon type="shopping-cart" /> Pokaż kosz</button>
+        <Button iconName={ "shopping-cart" } buttonName={"Pokaż kosz"}/>
+        {/* <button><Icon type="shopping-cart" /> Pokaż kosz</button> */}
     </div>
     
     </>

@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $mainBackgroundColor;
+    height: 100px;
+    padding-bottom: 40px;
+}

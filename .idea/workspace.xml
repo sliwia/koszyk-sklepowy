@@ -12,14 +12,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/OpenBasketButton/OpenBasketButton.js">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -32,8 +31,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="liwia_szajner &lt;liwia.szajner@gmail.com&gt;" />
         <option value="Liwia" />
+        <option value="liwia_szajner &lt;liwia.szajner@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,12 +75,6 @@
               <item name="koszyk-sklepowy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="koszyk-sklepowy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="koszyk-sklepowy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="OpenBasketButton" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="koszyk-sklepowy" type="b2602c69:ProjectViewProjectNode" />
@@ -212,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568139524022</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Koz sklepowy - dodany nowy header z polami logowania, plan submenu">
+      <created>1568653969478</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1568653969478</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -227,7 +227,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -237,7 +237,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49925596" visible="true" weight="0.2782324" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49925596" visible="true" weight="0.5417349" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074404" side_tool="true" weight="0.2782324" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -258,7 +258,8 @@
     <MESSAGE value="Poprawki w wyglądzie kafli" />
     <MESSAGE value="Poprawki po code review" />
     <MESSAGE value="Animacja w buttonie kosz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Animacja w buttonie kosz" />
+    <MESSAGE value="Koz sklepowy - dodany nowy header z polami logowania, plan submenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Koz sklepowy - dodany nowy header z polami logowania, plan submenu" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Shop/index.js" />
@@ -286,19 +287,19 @@
         <state relative-caret-position="-405" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBasketButton/OpenBasketButton.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBasketButton/OpenBasketButton.scss" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBasketButton/OpenBasketButton.js" />
     <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBasketButton/OpenBasketButton.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>

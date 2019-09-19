@@ -16,7 +16,6 @@ export class ProductsList extends React.Component {
     };
 
     EventEmitter.subscribe('langChange', (event) => {
-      console.log('ev',event)
       const { products } = this.state;
       let showsToDisplay = products.filter(show => show.product.toLowerCase().startsWith(event.toLowerCase()))
       this.setState({showsToDisplay})

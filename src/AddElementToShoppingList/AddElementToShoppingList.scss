@@ -1,49 +1,66 @@
-@import '../variables.scss';
+@import "../_variables.scss";
 
 .grid-container--item {
-    content: '';
-    position: relative;
-    width: 150px;
-    height: 170px;
-    background: rgba(255, 255, 255, 0.5);
-    padding:5%;
-    box-shadow: 0 6px 6px  $darkslategrayColor;
-    color: black;
+  width: 242px;
+  height: 325px;
+  background: white;
+  padding: 5%;
+  color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 800px;
+  font-family: $roboto;
 }
 
 .grid-container--item--elements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .product-img {
-    height: 40px;
-    width: 40px;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20%; 
+  height: 147px;
+  width: 170px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
-.btn-add-product {
-    width: 30px;
-    height: 30px;
-    color: $darkslategrayColor;
-    background: white;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 50%;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+.btn-green {
+  width: 173px;
+  height: 47px;
+  color: white;
+  background: #67b42c;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 800;
 }
 
-.btn-add-product:hover {
-    color: white;
-    background: $darkslategrayColor;
-    transform: translateY(-3px);
-    transform: scale(1.2);
-  }
-
+.btn-green:hover {
+  background: darken($color: #67b42c, $amount: 10);
+  color: white;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+}

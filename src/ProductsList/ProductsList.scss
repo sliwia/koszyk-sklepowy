@@ -1,12 +1,15 @@
-@import '../variables.scss';
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
-    grid-column-gap: 13px;
-    grid-row-gap: 16px;
-    width: 820px;
-    margin: 0 auto;
-    padding: 5% 0;
+@import "../variables.scss";
+body {
+  background-color: #e5e5e5;
 }
 
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.all_product_list {
+  margin-left: 290px;
+}

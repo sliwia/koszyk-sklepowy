@@ -3,7 +3,7 @@ import axios from "axios";
 import { AddElementToShoppingList } from "../AddElementToShoppingList/AddElementToShoppingList";
 import "./ProductsList.scss";
 
-const API_URL = "https://api.mockaroo.com/api/ad8dc0f0?count=16&key=fc19d980";
+const API_URL = "https://api.mockaroo.com/api/ad8dc0f0?count=100&key=fc19d980";
 
 export class ProductsList extends React.Component {
   constructor(props) {

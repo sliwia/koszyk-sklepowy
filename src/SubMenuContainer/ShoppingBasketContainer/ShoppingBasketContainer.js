@@ -1,6 +1,6 @@
 import React from 'react';
 import './ShoppingBasketContainer.scss';
-import { Button } from '../../ComponentsUI/Button/Button';
+import { ButtonWithIcon } from '../../ComponentsUI/ButtonWithIcon/ButtonWithIcon';
 
 
 export const ShoppingBasketContainer = () => {
@@ -8,7 +8,7 @@ export const ShoppingBasketContainer = () => {
     <>
     <div className="item-submenu-container">
         <div className="shopping-button-container">
-            <Button iconName={ "shopping-cart" } buttonName={"Pokaż kosz"}/>
+            <ButtonWithIcon iconName={ "shopping-cart" } buttonName={"Pokaż kosz"}/>
         </div>
     </div>
     

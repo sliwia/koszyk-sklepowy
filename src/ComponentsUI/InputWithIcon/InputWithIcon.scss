@@ -2,15 +2,15 @@
 
 .icon { 
   position: absolute;
-  margin-top: 10px;
-  margin-left: 15px;
+  padding: 14px;
+  font-size: 15px;
   color: $grayColor; 
 } 
 
 .input-field { 
   width: 100%; 
   height: $heightElemet;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px 10px 10px 50px;
   border: none;
   outline: none;

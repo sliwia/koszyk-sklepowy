@@ -1,9 +1,9 @@
 import React from 'react';
 import { Icon } from 'antd';
-import './Button.scss';
+import './ButtonWithIcon.scss';
 
 
-export const Button = (props) => {
+export const ButtonWithIcon = (props) => {
     return (
     <>
       {/* todo: trzeba przekazyać w parametrach kolor główny i na jaki ma się zmieniać */}

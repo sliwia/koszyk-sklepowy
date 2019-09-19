@@ -1,13 +1,12 @@
 import React from 'react';
 import './SearchContainer.scss';
 import { InputWithIcon } from '../../ComponentsUI/InputWithIcon/InputWithIcon';
+import { EventEmitter } from '../../EventEmitter';
 
 
 export const SearchContainer = () => {
   const setProductFilter = (e) => {
-    console.log(e.target.value)
-    // let showsToDisplay = shows.filter(show => show.name.toLowerCase().startsWith(e.target.value))
-
+    EventEmitter.dispatch('langChange', e.target.value)
   }
 
 

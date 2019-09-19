@@ -9,7 +9,6 @@ import { CategoriesContainer } from './CategoriesContainer/CategoriesContainer';
 
 export const SubMenuContainer = () => {
   return (
-    // todo: wszystkie divy to będą osobne komponenty
     <div className="sub-menu-container">
       <LogoContainer />
       <ShoppingBasketContainer />

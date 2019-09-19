@@ -18,6 +18,7 @@
   font-size: 15px;
   font-weight: 800px;
   font-family: $roboto;
+  flex-shrink: 3;
 }
 
 .grid-container--item--elements {
@@ -63,4 +64,29 @@
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 11px;
+}
+.discount_label {
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  background-color: #67b42c;
+  color: white;
+  border-radius: 50%;
+  text-transform: lowercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -110px;
+  margin-top: -145px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  opacity: 0.9;
+}
+.price {
+  font-display: $roboto;
+  font-weight: 900;
+  font-size: 25px;
+}
+.title {
+  height: 50px;
 }

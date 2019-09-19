@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { AddElementToShoppingList } from "../AddElementToShoppingList/AddElementToShoppingList";
 import "./ProductsList.scss";
-import { EventEmitter } from '../EventEmitter';
+import { EventEmitter } from "../EventEmitter";
 
 const API_URL = "https://api.mockaroo.com/api/ad8dc0f0?count=100&key=fc19d980";
 
@@ -11,26 +11,26 @@ export class ProductsList extends React.Component {
     super(props);
     this.state = {
       products: [],
-      showsToDisplay:[]
-
+      showsToDisplay: []
     };
 
-    EventEmitter.subscribe('langChange', (event) => {
+    EventEmitter.subscribe("langChange", event => {
       const { products } = this.state;
-      let showsToDisplay = products.filter(show => show.product.toLowerCase().startsWith(event.toLowerCase()))
-      this.setState({showsToDisplay})
-      })
-
+      let showsToDisplay = products.filter(show =>
+        show.product.toLowerCase().startsWith(event.toLowerCase())
+      );
+      this.setState({ showsToDisplay });
+    });
   }
   componentDidMount() {
     axios
       .get(API_URL)
       .then(response => response.data)
       .then(data => {
-        this.setState({ 
+        this.setState({
           products: data,
-          showsToDisplay:data
-         });
+          showsToDisplay: data
+        });
       });
   }
 
@@ -42,6 +42,8 @@ export class ProductsList extends React.Component {
             <AddElementToShoppingList
               product={elList.product}
               price={elList.price}
+              discount={elList.discount}
+              discountValue={elList.discountValue}
               photo={elList.photo}
               key={elList.id}
             />

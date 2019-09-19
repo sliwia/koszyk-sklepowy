@@ -6,7 +6,8 @@ export const LogoContainer = () => {
   return (
     <>
       <div className='logo-container'>
-        <img src={Logo} width='100' height='100' alt='website logo' />
+        <img src={Logo} width='45' height='45' alt='website logo' />
+        <h1> Witaj w naszym sklepie</h1>
       </div>
     </>
   );

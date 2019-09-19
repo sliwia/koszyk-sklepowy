@@ -7,7 +7,7 @@ export const CategoriesContainer = () => {
     return (
     <>
         <div className="item-submenu-container">
-            <div className="item-categories" >Kategorie <Icon type="down" /></div>
+            <div className="item-categories" >Kategorie </div>
                 <div className="submenu-categories">
                     {/* todo: tu będą checkboxy z kategoriami */}
                     {/* <input type="checkbox" name="warzywa" value="Warzywa"> Warzywa</input>

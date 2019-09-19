@@ -1,33 +1,17 @@
 import React from 'react';
 import './SearchContainer.scss';
+import { InputWithIcon } from '../../ComponentsUI/InputWithIcon/InputWithIcon';
 
 
 export const SearchContainer = () => {
     return (
     <>
     <div className="item-submenu-container">
-        <span>Będzie wyszukiwarka</span>
-    </div>
-      {
+      <div className="input-search-container">
+        <InputWithIcon iconType={"search"} type={"text"} placeholderText={"Wyszukaj"} />
+      </div>
         
-          
-          
-          /* 
-      <InputWithIcon icon="lock" placeholder="Haslo" type="password" />
-      
-      <Input
-        suffix={
-          <Button
-            className="search-btn"
-            style={{ marginRight: -12 }}
-            size="large"
-            type="primary"
-          >
-            <Icon type="search" />
-          </Button>
-        }
-        /> */}
-
+    </div>
     </>
     );
 }

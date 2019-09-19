@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icon, Input, Button } from 'antd';
 import './Header.scss';
+import { InputWithIcon } from '../ComponentsUI/InputWithIcon/InputWithIcon';
 
 
 
@@ -9,21 +9,10 @@ export const Header = () => {
   return (
     <div className ="header-container">
       <div className="login-container">
-        <Input
-          prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-          placeholder="Login"
-        />
-
-        <Input
-            prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-            type="password"
-            placeholder="Hasło"
-        />
-
-        <Button className="log-btn" htmlType="submit">
-            Zaloguj
-        </Button>
+        <InputWithIcon iconType={"user"} type={"text"} placeholderText={"Login"} />
+        <InputWithIcon iconType={"lock"} type={"password"} placeholderText={"Hasło"} />
       </div>
+      
     </div>
   );
 }

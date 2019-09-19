@@ -3,13 +3,14 @@
 
 button{
   position:relative;
-  height:$heightElemet;
-  background:$mainBackgroundColor;
+  height:70px;
+  background:$mainGreenColor;
   border:none;
   outline:none;
   border-radius: 10px;
   color:#fff;
-  font-size:12pt;
+  font-size:18pt;
+  font-weight: 400;
   padding:0 40px;
   transition:800ms ease all;
   cursor:pointer;
@@ -17,7 +18,7 @@ button{
 
 button:hover{
   background:#fff;
-  color:$mainBackgroundColor;
+  color: $mainGreenColor;
   border-radius: 0;
 }
 
@@ -28,7 +29,7 @@ button:before,button:after{
   right:0;
   height:2px;
   width:0;
-  background: $mainBackgroundColor;
+  background: $mainGreenColor;
   transition:400ms ease all;
 }
 

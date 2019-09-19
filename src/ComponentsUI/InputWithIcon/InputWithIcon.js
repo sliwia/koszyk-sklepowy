@@ -9,7 +9,8 @@ export const InputWithIcon = (props) => {
         <Icon className="icon" type={props.iconType} />
         <input className="input-field" 
         type={props.type} 
-        placeholder={props.placeholderText}/> 
+        placeholder={props.placeholderText}
+        onKeyUp = {props.onKeyUp}/> 
       </div> 
     );
 }

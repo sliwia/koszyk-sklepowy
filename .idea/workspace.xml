@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76b6d478-6a9c-48f8-bdab-0e5cc6e2b9be" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ComponentsUI/ButtonWithIcon/ButtonWithIcon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ComponentsUI/ButtonWithIcon/ButtonWithIcon.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComponentsUI/Button/Button.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComponentsUI/Button/Button.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComponentsUI/ButtonWithIcon/ButtonWithIcon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentsUI/ButtonWithIcon/ButtonWithIcon.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ComponentsUI/InputWithIcon/InputWithIcon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComponentsUI/InputWithIcon/InputWithIcon.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProductsList/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProductsList/ProductsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SubMenuContainer/ShoppingBasketContainer/ShoppingBasketContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubMenuContainer/ShoppingBasketContainer/ShoppingBasketContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubMenuContainer/LogoContainer/LogoContainer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubMenuContainer/LogoContainer/LogoContainer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SubMenuContainer/SearchContainer/SearchContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubMenuContainer/SearchContainer/SearchContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/_variables.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -261,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568879911316</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Zmiany w komponentach + dodane nowe api">
+      <created>1568885340922</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1568885340922</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -313,7 +317,8 @@
     <MESSAGE value="Poprawiona wys logo" />
     <MESSAGE value="Zmiany w komponentach UI" />
     <MESSAGE value="Rozwiązany konflikt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rozwiązany konflikt" />
+    <MESSAGE value="Zmiany w komponentach + dodane nowe api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zmiany w komponentach + dodane nowe api" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Shop/index.js" />

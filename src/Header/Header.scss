@@ -2,15 +2,35 @@
 
 .header-container { 
     position: fixed;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
     height: 60px;
+    width: 100%;
     background: $mainGreenColor; 
+    z-index: 100;
+    padding:10px;
 }
 
 .login-container { 
     display: flex;
     justify-content: space-between;
-    padding: 8px;
-    margin-left: 58%;
+
+}
+
+.login-container div:not(:last-child) {
+    margin-right: 5px;
+  }
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $mainGreenColor;
     
+}
+
+.logo-container h1{
+    color: $whiteColor;
+    font-size: 22px;
+    padding-top:10px;
 }

@@ -6,10 +6,9 @@ import { ButtonWithIcon } from '../../ComponentsUI/ButtonWithIcon/ButtonWithIcon
 export const ShoppingBasketContainer = () => {
     return (
     <>
-    <div className="item-submenu-container">
-        <div className="shopping-button-container">
-            <ButtonWithIcon iconName={ "shopping-cart" } buttonName={"Pokaż kosz"}/>
-        </div>
+    
+    <div className="shopping-button-container">
+        <ButtonWithIcon iconName={ "shopping-cart" } buttonName={"Pokaż kosz"}/>
     </div>
     
     </>

@@ -3,7 +3,7 @@
 
 button{
   position:relative;
-  height:70px;
+  height:60px;
   background:$mainGreenColor;
   border:none;
   outline:none;
@@ -11,38 +11,17 @@ button{
   color:#fff;
   font-size:18pt;
   font-weight: 400;
-  padding:0 40px;
+  padding:0 30px;
   transition:800ms ease all;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.685);
   cursor:pointer;
 }
 
 button:hover{
   background:#fff;
   color: $mainGreenColor;
-  border-radius: 0;
 }
 
-button:before,button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: $mainGreenColor;
-  transition:400ms ease all;
-}
 
-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-
-button:hover:before,button:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
 
 button:active{background-color:rgb(122, 122, 122);}

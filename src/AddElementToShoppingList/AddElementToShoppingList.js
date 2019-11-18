@@ -10,7 +10,7 @@ export class AddElementToShoppingList extends React.Component {
     let discount;
     if (this.props.discount === true) {
       discount = (
-        <div className='discount_label'>{this.props.discountValue} {"% taniej"} </div>
+        <div className='discount-label'>{"-"}{ this.props.discountValue}{"%"} </div>
       );
     }
     const liStyle = { backgroundImage: "url(" + this.props.photo + ")" };
@@ -22,9 +22,10 @@ export class AddElementToShoppingList extends React.Component {
           <span className='title'>{this.props.product}</span>
           <span className='price'>
             Cena:
-            {"  " + this.props.price}
+            {"  " + this.props.price + " zł"}
           </span>
-          <div className='btn-green'>dodaj do koszyka</div>
+          {/* Dodać toltip "dodaj do koszyka" a przy dodaj dodać ionke +, przy kliknięciu dodać zmiane koloru ła - imitacja kliknięcia*/}
+          <div className='btn-green'>Dodaj do koszyka</div>
         </div>
       </div>
     );

@@ -14,7 +14,7 @@ export class ProductsList extends React.Component {
       showsToDisplay: []
     };
 
-    EventEmitter.subscribe("langChange", event => {
+    EventEmitter.subscribe("textChange", event => {
       const { products } = this.state;
       let showsToDisplay = products.filter(show =>
         show.product.toLowerCase().startsWith(event.toLowerCase())
@@ -36,7 +36,7 @@ export class ProductsList extends React.Component {
 
   render() {
     return (
-      <div className='all_product_list'>
+      <div className='all-product-list'>
         <div className='grid-container'>
           {this.state.showsToDisplay.map(elList => (
             <AddElementToShoppingList

@@ -5,13 +5,38 @@ import './CategoriesContainer.scss';
 export const CategoriesContainer = () => {
     return (
     <>
-        <div className="item-submenu-container">
-            <div className="item-categories" >Filtruj </div>
-                <div className="submenu-categories">
-                    {/* todo: tu będą checkboxy z dodatkowymi opcjami filtrowwania*/}
-                    
-                </div>
-        </div>
+    <div className="item" >
+        <h3 className="categ-container--title">
+            Filtruj
+        </h3>
+            
+        <label class="item-categories">
+            Pomocyjne
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+        </label>
+            <label class="item-categories">Owoce
+            <input type="checkbox" />
+        <span class="checkmark"></span>
+        </label>
+        <label class="item-categories">Warzywa
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+        </label>
+        <label class="item-categories">Nabiał
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+        </label>
+        <label class="item-categories">Soki
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+        </label>
+        <label class="item-categories">Inne
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+        </label>
+    </div>
+            
     </>
     );
 }

@@ -8,7 +8,7 @@
     color:white !important;
     background: rgb(37, 37, 37); 
     z-index: 1000;
-    padding:20px;
+    padding: 20px 50px;
 }
 
 .header-content {
@@ -25,6 +25,19 @@
 .titles-content {
     display: flex;
     justify-content: space-between;
+}
+
+.titles-content span:nth-child(1) {
+    margin-left: -10px;
+}
+
+.titles-content span:nth-child(3) {
+    margin-left: 25px;
+}
+
+.titles-content span:nth-child(4) {
+    margin-right: -10px;
+
 }
 
 .steps-content {
@@ -68,9 +81,14 @@
     color: $lightgrayColor;
 }
 
-.steps-container .anticon {
-    color: $whiteColor;
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+    color: $mainGreenColor;
 }
+.ant-steps-item-custom.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon {
+    color: $mainGreenColor;
+    font-size: 35px;
+}
+
 
 .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
     background-color: $mainGreenColor;
@@ -78,6 +96,3 @@
 
 }
 
-// .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
-//     color: rgba(103, 180, 44, 0.7);
-// }

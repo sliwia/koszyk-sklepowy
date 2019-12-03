@@ -6,18 +6,26 @@ const { Step } = Steps;
 
 const steps = [
   {
+    title: '',
+    description: 'Zaloguj się',
     content: 'Zaloguj się aby kontynuować zakupy',
     icon: 'user',
   },
   {
+    title: '',
+    description: 'Zatwierdź listę zakupów',
     content: 'Tu będzie lista zakupów',
     icon: 'shopping-cart',
   },
   {
+    title: 'test',
+    description: 'Opłata',
     content: 'Dokonaj opłaty',
     icon: 'credit-card'
   },
   {
+    title: 'test',
+    description: 'Zakupy zakończone',
     content: 'Zakupy zakończone!',
     icon: 'check-circle'
   }
@@ -43,6 +51,16 @@ export class StepsOfShopping extends React.Component {
 
   render() {
     const { current } = this.state;
+    let prevButton = <div></div>;
+    let nextButton = <div></div>;
+    if (current > 0) {
+      prevButton = <div onClick={() => this.prev()} ><Icon type="left" /> Wstecz</div>
+    }
+
+    if (current < steps.length - 1) {
+      nextButton = <div onClick={() => this.next()}>Dalej <Icon type="right" /></div>
+    }
+
     return (
       <div className="steps-container" >
         
@@ -56,7 +74,7 @@ export class StepsOfShopping extends React.Component {
       <div> 
         <Steps current={current}>
           {steps.map(item => (
-            <Step key={item.title} icon={<Icon type={item.icon} />} />
+            <Step key={item.title}  icon={<Icon type={item.icon}  />} />
           ))}
         </Steps>
         <div className="titles-content">
@@ -74,9 +92,9 @@ export class StepsOfShopping extends React.Component {
         
         
         <div className="steps-btns">
-          <div onClick={() => this.prev()} ><Icon type="left" /> Wstecz</div>
-          
-          <div onClick={() => this.next()}>Dalej <Icon type="right" /></div>
+          { prevButton }
+          { nextButton }
+          {/* <div onClick={() => this.next()}>Dalej <Icon type="right" /></div> */}
           {/* {current < steps.length - 1 && (
             <Button type="primary" onClick={() => this.next()}>
               Dalej

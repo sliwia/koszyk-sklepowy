@@ -5,6 +5,7 @@ import "./App.scss";
 import { Header } from "./Header/Header";
 import { SubMenuContainer } from "./SubMenuContainer/SubMenuContainer";
 import { ProductsList } from "./ProductsList/ProductsList";
+import { StepsOfShopping } from "./StepsOfShopping/StepsOfShopping";
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
       <Header />
       <SubMenuContainer />
       <ProductsList />
+      <StepsOfShopping />
     </>
   );
 };

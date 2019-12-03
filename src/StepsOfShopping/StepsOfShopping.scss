@@ -1,0 +1,83 @@
+@import '../_variables.scss';
+
+.steps-container { 
+    position: fixed;
+    top: 60px;
+    height: 80vh;
+    width: 100%;
+    color:white !important;
+    background: rgb(37, 37, 37); 
+    z-index: 1000;
+    padding:20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content h1 {
+    color:white;
+    font-size: 30px;
+}
+
+.titles-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.steps-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-color: $stepsBorderColor;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 20px;
+
+}
+
+.steps-btns {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    padding:20px;
+    border-color: $stepsBorderColor;
+    border-style: solid;
+    border-top-style: none;
+    border-width: 2px;
+}
+
+.steps-btns div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+    font-size: 18px;
+    color: $mainGreenColor;
+}
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+    color: $lightgrayColor;
+}
+
+.steps-container .anticon {
+    color: $whiteColor;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+    background-color: $mainGreenColor;
+    height: 3px;
+
+}
+
+// .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+//     color: rgba(103, 180, 44, 0.7);
+// }

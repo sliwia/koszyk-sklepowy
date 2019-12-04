@@ -6,53 +6,198 @@
                 "product": "Jabłka",
                 "price": 10,
                 "photo": "https://cdn.pixabay.com/photo/2016/11/29/03/23/apples-1867043_960_720.jpg",
-                "category": "fruits"
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
                 
             },
             "2":{
                 "product": "Gruszki",
                 "price": 11,
                 "photo": "https://cdn.pixabay.com/photo/2019/03/14/19/05/pears-4055660_960_720.jpg",
-                "category": "fruits"
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
             },
             "3":{
                 "product": "Banany",
                 "price": 12,
                 "photo": "https://cdn.pixabay.com/photo/2018/09/24/20/12/bananas-3700718_960_720.jpg",
-                "category": "fruits"
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
             },
             "4":{
                 "product": "Awokado",
                 "price": 13,
                 "photo": "https://cdn.pixabay.com/photo/2015/12/08/00/25/pears-1081695_960_720.jpg",
-                "category": "fruits"
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
             },
             "5":{
-                "product": "Gruszki",
-                "price": 11,
-                "photo": "https://cdn.pixabay.com/photo/2019/03/14/19/05/pears-4055660_960_720.jpg",
-                "category": "fruits"
+                "product": "Granat",
+                "price": 8,
+                "photo": "https://cdn.pixabay.com/photo/2019/11/15/08/22/pomegranate-4627921_960_720.jpg",
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
             },
             "6":{
-                "product": "Jabłka",
+                "product": "Mandarynki",
                 "price": 10,
-                "photo": "https://cdn.pixabay.com/photo/2016/11/29/03/23/apples-1867043_960_720.jpg",
-                "category": "fruits"
+                "photo": "https://cdn.pixabay.com/photo/2018/12/06/21/31/mandarins-3860659_960_720.jpg",
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
                 
             },
             "7":{
-                "product": "Awokado",
+                "product": "Pomarańcze",
                 "price": 13,
-                "photo": "https://cdn.pixabay.com/photo/2015/12/08/00/25/pears-1081695_960_720.jpg",
-                "category": "fruits"
+                "photo": "https://cdn.pixabay.com/photo/2017/02/26/12/27/oranges-2100108_960_720.jpg",
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
             },
            
             "8":{
-                "product": "Banany",
-                "price": 12,
-                "photo": "https://cdn.pixabay.com/photo/2018/09/24/20/12/bananas-3700718_960_720.jpg",
-                "category": "fruits"
+                "product": "Winogrona białe",
+                "price": 7,
+                "photo": "https://cdn.pixabay.com/photo/2019/11/11/11/00/grapes-4617987_960_720.jpg",
+                "category": "fruits",
+                "discount": true,
+                "discountValue": 10
+            },
+            "9":{
+                "product": "Ananas",
+                "price": 20,
+                "photo": "https://cdn.pixabay.com/photo/2017/04/11/07/11/pineapple-2220704_960_720.jpg",
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 5
+            },
+            "10":{
+                "product": "Arbuz",
+                "price": 6,
+                "photo": "https://cdn.pixabay.com/photo/2016/09/07/17/01/water-melon-1652093_960_720.jpg",
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
+            },
+            "11":{
+                "product": "Grejfrut",
+                "price": 5,
+                "photo": "https://cdn.pixabay.com/photo/2017/06/05/20/17/fruit-2375141_960_720.jpg",
+                "category": "fruits",
+                "discount": true,
+                "discountValue": 15
+            },
+            "12":{
+                "product": "Truskawki",
+                "price": 3,
+                "photo": "https://cdn.pixabay.com/photo/2013/04/02/21/47/strawberries-99551_960_720.jpg",
+                "category": "fruits",
+                "discount": false,
+                "discountValue": 1
+            },
+            "13":{
+                "product": "Pomidory",
+                "price": 6,
+                "photo": "https://cdn.pixabay.com/photo/2011/03/16/16/01/tomatoes-5356_960_720.jpg",
+                "category": "vegetables",
+                "discount": true,
+                "discountValue": 30
+            },
+            "14":{
+                "product": "Papryka kolorowa",
+                "price": 7,
+                "photo": "https://cdn.pixabay.com/photo/2014/10/22/21/54/sweet-peppers-499068_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "15":{
+                "product": "Kalafior",
+                "price": 5,
+                "photo": "https://cdn.pixabay.com/photo/2019/11/19/12/55/cauliflower-4637372_960_720.jpg",
+                "category": "vegetables",
+                "discount": true,
+                "discountValue": 20
+            },
+            "16":{
+                "product": "Ziemniaki",
+                "price": 32,
+                "photo": "https://cdn.pixabay.com/photo/2014/08/06/20/32/potatoes-411975_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "17":{
+                "product": "Cebula",
+                "price": 2,
+                "photo": "https://cdn.pixabay.com/photo/2016/05/16/22/47/onions-1397037_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "18":{
+                "product": "Por",
+                "price": 5,
+                "photo": "https://cdn.pixabay.com/photo/2017/04/03/21/04/leek-2199563_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "19":{
+                "product": "Batat",
+                "price": 6,
+                "photo": "https://cdn.pixabay.com/photo/2016/09/13/08/51/sweet-potato-1666707_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "20":{
+                "product": "Marchew",
+                "price": 3,
+                "photo": "https://cdn.pixabay.com/photo/2015/03/14/14/00/carrots-673184_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "21":{
+                "product": "Piertuszka",
+                "price": 3,
+                "photo": "https://cdn.pixabay.com/photo/2019/03/24/13/00/parsley-4077577_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "22":{
+                "product": "Pieczarki",
+                "price": 6,
+                "photo": "https://cdn.pixabay.com/photo/2016/05/18/14/33/mushrooms-1400622_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "23":{
+                "product": "Brokuł",
+                "price": 3,
+                "photo": "https://cdn.pixabay.com/photo/2016/03/04/09/51/broccoli-1235677_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
+            },
+            "24":{
+                "product": "Borowik",
+                "price": 25,
+                "photo": "https://cdn.pixabay.com/photo/2015/10/07/18/07/mushroom-976592_960_720.jpg",
+                "category": "vegetables",
+                "discount": false,
+                "discountValue": 1
             }
+
           
     }
       

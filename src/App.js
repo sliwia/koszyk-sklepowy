@@ -13,7 +13,7 @@ export const App = () => {
       <Header />
       <SubMenuContainer />
       <ProductsList />
-      <StepsOfShopping />
+      {/* <StepsOfShopping /> */}
     </>
   );
 };

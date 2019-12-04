@@ -90,26 +90,9 @@ export class StepsOfShopping extends React.Component {
           
         </div>
         
-        
         <div className="steps-btns">
           { prevButton }
           { nextButton }
-          {/* <div onClick={() => this.next()}>Dalej <Icon type="right" /></div> */}
-          {/* {current < steps.length - 1 && (
-            <Button type="primary" onClick={() => this.next()}>
-              Dalej
-            </Button>
-          )}
-          {current === steps.length - 1 && (
-            <Button type="primary" onClick={() => message.success('Zakupy zakończone!')}>
-              Zakończ
-            </Button>
-          )}
-          {current > 0 && (
-            <Button style={{ marginLeft: 8 }} onClick={() => this.prev()}>
-              Wstecz
-            </Button>
-          )} */}
         </div>
       
       

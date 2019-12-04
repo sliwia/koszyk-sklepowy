@@ -36,21 +36,21 @@ export class ProductsList extends React.Component {
   //     });
   // }
 
-  
+
 
   render() {
     return (
       <div className='all-product-list'>
         <div className='grid-container'>
-          { this.state.showsToDisplay.map(elList => (
-           
+          {this.state.showsToDisplay.map((elList, index) => (
+
             <AddElementToShoppingList
               product={elList[1].product}
               price={elList[1].price}
               discount={elList[1].discount}
               discountValue={elList[1].discountValue}
               photo={elList[1].photo}
-              key={elList.id}
+              key={index}
             />
           ))}
         </div>

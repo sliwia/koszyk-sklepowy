@@ -18,7 +18,7 @@ export const SubMenuContainer = () => {
       <div className="item-submenu-container categ-container">
         <CategoriesContainer />
       </div>
-      
+
     </div>
   );
 }

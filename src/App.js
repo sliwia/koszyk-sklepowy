@@ -7,13 +7,34 @@ import { SubMenuContainer } from "./SubMenuContainer/SubMenuContainer";
 import { ProductsList } from "./ProductsList/ProductsList";
 import { StepsOfShopping } from "./StepsOfShopping/StepsOfShopping";
 
-export const App = () => {
-  return (
-    <>
-      <Header />
-      <SubMenuContainer />
-      <ProductsList />
-      {/* <StepsOfShopping /> */}
-    </>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { showPopup: false };
+  }
+
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+  render() {
+    return (
+      <>
+        <Header />
+        <SubMenuContainer />
+        <ProductsList />
+        {this.state.showPopup ?
+          <StepsOfShopping
+            text='zamknij'
+            closePopup={this.togglePopup.bind(this)}
+
+          />
+          : null
+        }
+      </>
+    );
+  }
 };
+
+export default App

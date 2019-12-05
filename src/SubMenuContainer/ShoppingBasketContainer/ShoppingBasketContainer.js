@@ -8,9 +8,9 @@ export class ShoppingBasketContainer extends React.Component {
       <>
 
         <div className="shopping-button-container">
-          <ButtonWithIcon onClick={this.props.open} iconName={"shopping-cart"} buttonName={"Pokaż kosz"} />
+          <ButtonWithIcon onClick={this.props.action} iconName={"shopping-cart"} buttonName={"Pokaż kosz"} />
         </div>
-       
+
 
       </>
     );

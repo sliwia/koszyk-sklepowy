@@ -6,16 +6,24 @@ import { Header } from "./Header/Header";
 import { SubMenuContainer } from "./SubMenuContainer/SubMenuContainer";
 import { ProductsList } from "./ProductsList/ProductsList";
 import { StepsOfShopping } from "./StepsOfShopping/StepsOfShopping";
+import { ButtonWithIcon } from '././ComponentsUI/ButtonWithIcon/ButtonWithIcon';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showPopup: false };
+    this.state = {
+      showPopup: false
+    };
   }
 
-  togglePopup() {
+  closePopup() {
     this.setState({
       showPopup: !this.state.showPopup
+    });
+  }
+  openPopup() {
+    this.setState({
+      showPopup: this.state.showPopup
     });
   }
   render() {
@@ -24,14 +32,18 @@ class App extends React.Component {
         <Header />
         <SubMenuContainer />
         <ProductsList />
-        {this.state.showPopup ?
-          <StepsOfShopping
-            text='zamknij'
-            closePopup={this.togglePopup.bind(this)}
+        <StepsOfShopping
+          text='zamknij'
+          closePopup={this.closePopup.bind(this)}
 
-          />
-          : null
-        }
+        />
+
+        <ButtonWithIcon
+          action={this.openPopup.bind(this)}
+          iconName={"shopping-cart"}
+          buttonName={"Pokaż kosz"}
+        />
+
       </>
     );
   }

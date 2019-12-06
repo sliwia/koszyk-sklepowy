@@ -36,8 +36,7 @@ export class StepsOfShopping extends React.Component {
     super(props);
     this.state = {
       current: 0,
-
-
+      showPopup: false
     };
   }
 
@@ -50,7 +49,16 @@ export class StepsOfShopping extends React.Component {
     const current = this.state.current - 1;
     this.setState({ current });
   }
-
+  closePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+  openPopup() {
+    this.setState({
+      showPopup: this.state.showPopup
+    });
+  }
 
 
 
@@ -102,7 +110,7 @@ export class StepsOfShopping extends React.Component {
 
 
         </div>
-        <div className='btn close' onClick={this.props.closePopup}>{this.props.text}</div>
+        <div className='btn close' onClick={this.closePopup.bind(this)}>zamknij</div>
 
       </div>
     );

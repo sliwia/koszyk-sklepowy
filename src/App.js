@@ -6,7 +6,6 @@ import { Header } from "./Header/Header";
 import { SubMenuContainer } from "./SubMenuContainer/SubMenuContainer";
 import { ProductsList } from "./ProductsList/ProductsList";
 import { StepsOfShopping } from "./StepsOfShopping/StepsOfShopping";
-import { ButtonWithIcon } from '././ComponentsUI/ButtonWithIcon/ButtonWithIcon';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,32 +17,26 @@ class App extends React.Component {
 
   closePopup() {
     this.setState({
-      showPopup: !this.state.showPopup
+      showPopup: false
     });
   }
   openPopup() {
     this.setState({
-      showPopup: this.state.showPopup
+      showPopup: true
     });
   }
   render() {
+    let steptrue = <StepsOfShopping />
+    let openClose
+    if (this.state.showPopup === true) {
+      openClose = steptrue
+    }
     return (
       <>
         <Header />
         <SubMenuContainer />
         <ProductsList />
-        <StepsOfShopping
-          text='zamknij'
-          closePopup={this.closePopup.bind(this)}
-
-        />
-
-        <ButtonWithIcon
-          action={this.openPopup.bind(this)}
-          iconName={"shopping-cart"}
-          buttonName={"Pokaż kosz"}
-        />
-
+        {openClose}
       </>
     );
   }

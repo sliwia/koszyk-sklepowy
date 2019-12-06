@@ -45,6 +45,7 @@ export class ProductsList extends React.Component {
           {this.state.showsToDisplay.map((elList, index) => (
 
             <AddElementToShoppingList
+              productId = { elList[0] }
               product={elList[1].product}
               price={elList[1].price}
               discount={elList[1].discount}

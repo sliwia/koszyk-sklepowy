@@ -15,9 +15,7 @@ export class ProductsList extends React.Component {
     };
 
     EventEmitter.subscribe("textChange", event => {
-      // const { products } = this.state;
       let showsToDisplay = Object.entries(Products).filter(show =>
-
         show[1].product.toLowerCase().startsWith(event.toLowerCase())
       );
       this.setState({ showsToDisplay });
@@ -35,8 +33,6 @@ export class ProductsList extends React.Component {
   //       });
   //     });
   // }
-
-
 
   render() {
     return (

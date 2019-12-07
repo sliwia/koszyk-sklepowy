@@ -6,7 +6,7 @@ import { EventEmitter } from '../../EventEmitter';
 
 export const SearchContainer = () => {
   const setProductFilter = (e) => {
-    EventEmitter.dispatch('textChange', e.target.value)
+    EventEmitter.dispatch('textChange', e.target.value);
   }
 
 

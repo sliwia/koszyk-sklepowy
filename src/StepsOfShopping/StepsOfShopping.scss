@@ -1,6 +1,7 @@
 @import '../_variables.scss';
 
 .steps-container { 
+    visibility: visible;
     position: fixed;
     top: 60px;
     height: 100%;
@@ -9,6 +10,9 @@
     background: rgb(37, 37, 37); 
     z-index: 2;
     padding: 20px 50px;
+}
+.steps-cintainer-hide {
+    visibility: hidden;
 }
 
 .header-content {
@@ -95,14 +99,15 @@
     height: 3px;
 
 }
-.close{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
 
+.btn-close {
+    position: fixed;
+    width:28px;
+    top: 70px;
+    right: 10px;
 }
-.close:hover{
+
+.btn-close:hover {
    cursor: pointer;
 
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Steps, Icon } from 'antd';
+import { Steps, Icon, Tooltip } from 'antd';
 import './StepsOfShopping.scss';
+import {EventEmitter} from '../EventEmitter';
 
 const { Step } = Steps;
 
@@ -38,6 +39,11 @@ export class StepsOfShopping extends React.Component {
       current: 0,
       showPopup: false
     };
+
+    EventEmitter.subscribe("visibilityBasket", event => {
+      this.setState({ showPopup: event });
+    });
+
   }
 
   next() {
@@ -49,23 +55,18 @@ export class StepsOfShopping extends React.Component {
     const current = this.state.current - 1;
     this.setState({ current });
   }
+
   closePopup() {
     this.setState({
-      showPopup: !this.state.showPopup
+      showPopup: false
     });
   }
-  openPopup() {
-    this.setState({
-      showPopup: this.state.showPopup
-    });
-  }
-
-
 
   render() {
     const { current } = this.state;
     let prevButton = <div></div>;
     let nextButton = <div></div>;
+    let stepsContainerStyle="steps-container";
     if (current > 0) {
       prevButton = <div onClick={() => this.prev()} ><Icon type="left" /> Wstecz</div>
     }
@@ -74,9 +75,17 @@ export class StepsOfShopping extends React.Component {
       nextButton = <div onClick={() => this.next()}>Dalej <Icon type="right" /></div>
     }
 
-    return (
-      <div className="steps-container" >
+    if (this.state.showPopup===false) {
+      stepsContainerStyle="steps-cintainer-hide";
+    }
 
+    return (
+      <div className={stepsContainerStyle} >
+        <Tooltip placement="bottom" title={"Zamknij"}>
+          <div className="btn-close" onClick={this.closePopup.bind(this)}>
+            <Icon type="close-square" style={{ fontSize: '27px', color: 'white' }} />
+          </div>
+        </Tooltip>
         <div className="header-content">
           <h1>
             Moje zakupy
@@ -108,9 +117,7 @@ export class StepsOfShopping extends React.Component {
             {nextButton}
           </div>
 
-
         </div>
-        <div className='btn close' onClick={this.closePopup.bind(this)}>zamknij</div>
 
       </div>
     );

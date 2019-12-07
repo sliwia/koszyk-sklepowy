@@ -3,11 +3,11 @@
 .steps-container { 
     position: fixed;
     top: 60px;
-    height: 80vh;
+    height: 100%;
     width: 100%;
     color:white !important;
     background: rgb(37, 37, 37); 
-    z-index: 1000;
+    z-index: 2;
     padding: 20px 50px;
 }
 
@@ -95,4 +95,14 @@
     height: 3px;
 
 }
+.close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
 
+}
+.close:hover{
+   cursor: pointer;
+
+}

@@ -36,6 +36,7 @@ export class StepsOfShopping extends React.Component {
     super(props);
     this.state = {
       current: 0,
+      showPopup: false
     };
   }
 
@@ -48,6 +49,18 @@ export class StepsOfShopping extends React.Component {
     const current = this.state.current - 1;
     this.setState({ current });
   }
+  closePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
+  openPopup() {
+    this.setState({
+      showPopup: this.state.showPopup
+    });
+  }
+
+
 
   render() {
     const { current } = this.state;
@@ -63,41 +76,42 @@ export class StepsOfShopping extends React.Component {
 
     return (
       <div className="steps-container" >
-        
+
         <div className="header-content">
           <h1>
             Moje zakupy
           </h1>
         </div>
-        
-      
-      <div> 
-        <Steps current={current}>
-          {steps.map(item => (
-            <Step key={item.title}  icon={<Icon type={item.icon}  />} />
-          ))}
-        </Steps>
-        <div className="titles-content">
-          <span>Zaloguj się</span>
-          <span>Zatwierdź listę zakupów</span>
-          <span>Opłata</span>
-          <span>Zakupy zakończone</span>
-        </div>
 
-        <div className="steps-content">
 
-          {steps[current].content}
-          
+        <div>
+          <Steps current={current}>
+            {steps.map((index, i = 1) => (
+              <Step key={current + i++} icon={<Icon type={index.icon} />} />
+            ))}
+          </Steps>
+          <div className="titles-content">
+            <span>Zaloguj się</span>
+            <span>Zatwierdź listę zakupów</span>
+            <span>Opłata</span>
+            <span>Zakupy zakończone</span>
+          </div>
+
+          <div className="steps-content">
+
+            {steps[current].content}
+
+          </div>
+
+          <div className="steps-btns">
+            {prevButton}
+            {nextButton}
+          </div>
+
+
         </div>
-        
-        <div className="steps-btns">
-          { prevButton }
-          { nextButton }
-        </div>
-      
-      
-      </div>
-        
+        <div className='btn close' onClick={this.closePopup.bind(this)}>zamknij</div>
+
       </div>
     );
   }

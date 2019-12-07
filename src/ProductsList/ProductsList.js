@@ -36,10 +36,9 @@ export class ProductsList extends React.Component {
 
   render() {
     return (
-      <div className='all-product-list'>
-        <div className='grid-container'>
+      <div className="all-product-list">
+        <div className="grid-container">
           {this.state.showsToDisplay.map((elList, index) => (
-
             <AddElementToShoppingList
               productId = { elList[0] }
               product={elList[1].product}

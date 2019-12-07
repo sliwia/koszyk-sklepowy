@@ -14,19 +14,18 @@
 .login-container { 
     display: flex;
     justify-content: space-between;
-
 }
 
 .login-container div:not(:last-child) {
     margin-right: 5px;
-  }
+}
 
 .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background: $mainGreenColor;
-    
+    cursor: default;
 }
 
 .logo-container h1{

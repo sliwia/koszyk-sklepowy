@@ -1,28 +1,30 @@
 import React from "react";
-import { Tooltip } from "antd";
+import { Tooltip, Icon } from "antd";
 import "./AddElementToShoppingList.scss";
 
 
 export class AddElementToShoppingList extends React.Component {
-  // constructor(props) {
-  //  super(props);
-
-  // }
 
   addProduct(e) {
     // Reset item "selectedProductsIds"
     //localStorage.setItem('selectedProductsIds', '')
 
-    let separator ='; '
+    let separator ='; ';
     if (localStorage.getItem("selectedProductsIds") === null) {
-      localStorage.setItem('selectedProductsIds', '')
+      localStorage.setItem('selectedProductsIds', '');
     }
     if (localStorage.getItem("selectedProductsIds") === '') {
-      separator = ''
+      separator = '';
     }
     let selectedProductId = localStorage.getItem('selectedProductsIds') + separator + e.target.id;
-    localStorage.setItem('selectedProductsIds', selectedProductId)
-    console.log(localStorage.getItem('selectedProductsIds'));
+    localStorage.setItem('selectedProductsIds', selectedProductId);
+    //create list from string 
+    // let productsStr = localStorage.getItem("selectedProductsIds");
+    // let productsArray = productsStr.split("; ");
+    // let productArryUniqueValue = [... new Set(productsArray)]
+
+    // console.log('productsArray',productsArray);
+    // console.log('productArryUniqueValue',productArryUniqueValue);
   }
 
   render() {
@@ -43,11 +45,11 @@ export class AddElementToShoppingList extends React.Component {
             Cena:
             {"  " + this.props.price + " zł"}
           </span>
-          {/* Dodać toltip "dodaj do koszyka" a przy dodaj dodać ionke +, przy kliknięciu dodać zmiane koloru ła - imitacja kliknięcia*/}
           <Tooltip placement="right" title={"Dodaj do koszyka"}>
-            <div id={this.props.productId} className="btn-add-product" onClick={this.addProduct.bind(this)}> + </div>
+            <div id={this.props.productId} className="btn-add-product" onClick={this.addProduct.bind(this)}>
+               <Icon type="shopping-cart" style={{ fontSize: '25px', fontWeight: 'bold' }}/>
+            </div>
           </Tooltip>
-          
           
         </div>
       </div>

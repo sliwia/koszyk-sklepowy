@@ -86,39 +86,34 @@ export class StepsOfShopping extends React.Component {
             <Icon type="close-square" style={{ fontSize: '27px', color: 'white' }} />
           </div>
         </Tooltip>
+        
         <div className="header-content">
           <h1>
             Moje zakupy
           </h1>
         </div>
 
+        <Steps current={current}>
+          {steps.map((index, i = 1) => (
+            <Step key={current + i++} icon={<Icon type={index.icon} />} />
+          ))}
+        </Steps>
 
-        <div>
-          <Steps current={current}>
-            {steps.map((index, i = 1) => (
-              <Step key={current + i++} icon={<Icon type={index.icon} />} />
-            ))}
-          </Steps>
-          <div className="titles-content">
-            <span>Zaloguj się</span>
-            <span>Zatwierdź listę zakupów</span>
-            <span>Opłata</span>
-            <span>Zakupy zakończone</span>
-          </div>
-
-          <div className="steps-content">
-
-            {steps[current].content}
-
-          </div>
-
-          <div className="steps-btns">
-            {prevButton}
-            {nextButton}
-          </div>
-
+        <div className="titles-content">
+          <span>Zaloguj się</span>
+          <span>Zatwierdź listę zakupów</span>
+          <span>Opłata</span>
+          <span>Zakupy zakończone</span>
         </div>
 
+        <div className="steps-content">
+          {steps[current].content}
+        </div>
+
+        <div className="steps-btns">
+          {prevButton}
+          {nextButton}
+        </div>
       </div>
     );
   }

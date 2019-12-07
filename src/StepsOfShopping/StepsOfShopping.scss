@@ -1,5 +1,6 @@
 @import '../_variables.scss';
 
+
 .steps-container { 
     visibility: visible;
     position: fixed;
@@ -11,6 +12,7 @@
     z-index: 2;
     padding: 20px 50px;
 }
+
 .steps-cintainer-hide {
     visibility: hidden;
 }
@@ -29,6 +31,7 @@
 .titles-content {
     display: flex;
     justify-content: space-between;
+    cursor: default;
 }
 
 .titles-content span:nth-child(1) {
@@ -41,14 +44,13 @@
 
 .titles-content span:nth-child(4) {
     margin-right: -10px;
-
 }
 
 .steps-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 60%;
     border-color: $stepsBorderColor;
     border-style: solid;
     border-width: 2px;
@@ -74,7 +76,17 @@
     cursor: pointer;
 }
 
+.btn-close {
+    position: fixed;
+    width:28px;
+    top: 70px;
+    right: 10px;
+}
 
+.btn-close:hover {
+   cursor: pointer;
+
+}
 
 .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
     font-size: 18px;
@@ -93,21 +105,8 @@
     font-size: 35px;
 }
 
-
 .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
     background-color: $mainGreenColor;
     height: 3px;
-
-}
-
-.btn-close {
-    position: fixed;
-    width:28px;
-    top: 70px;
-    right: 10px;
-}
-
-.btn-close:hover {
-   cursor: pointer;
 
 }

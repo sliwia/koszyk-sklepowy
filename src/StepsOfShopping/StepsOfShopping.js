@@ -1,7 +1,7 @@
 import React from 'react';
-import { Steps, Icon, Tooltip } from 'antd';
+import { Steps, Icon, Tooltip,Result } from 'antd';
 import './StepsOfShopping.scss';
-import {EventEmitter} from '../EventEmitter';
+import { EventEmitter } from '../EventEmitter';
 
 const { Step } = Steps;
 
@@ -9,7 +9,12 @@ const steps = [
   {
     title: '',
     description: 'Zaloguj się',
-    content: 'Zaloguj się aby kontynuować zakupy',
+    content: <Result
+    icon={<Icon type="user" />}
+    title="Zaloguj się!"
+    subTitle="Następnie kontynuuj zakupy"
+    
+  />,
     icon: 'user',
   },
   {

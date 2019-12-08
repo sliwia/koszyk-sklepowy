@@ -19,8 +19,14 @@
   font-weight: 800px;
   font-family: $roboto;
   flex-shrink: 3;
-}
 
+}
+.grid-container--item:hover{
+  zoom: 0.98;
+  background: rgb(238, 238, 238);
+  user-select: none;
+  
+}
 .grid-container--item--elements {
   display: flex;
   flex-direction: column;

@@ -26,7 +26,9 @@ li {
   color: white;
   padding: 5px;
 }
-
+li:hover {
+  zoom: 1.2;
+}
 li:last-child {
   margin-bottom: 0;
 }

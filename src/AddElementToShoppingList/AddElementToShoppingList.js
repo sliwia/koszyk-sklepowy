@@ -40,7 +40,7 @@ export class AddElementToShoppingList extends React.Component {
         <div className="grid-container--item--elements">
           {discount}
           <div className="product-img" style={liStyle}></div>
-          <span className="title">{this.props.product}</span>
+          <span className="title">{this.props.name}</span>
           <span className="price">
             Cena:
             {"  " + this.props.price + " zł"}

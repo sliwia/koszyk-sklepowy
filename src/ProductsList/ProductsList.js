@@ -1,51 +1,57 @@
 import React from "react";
-//import axios from "axios";
+import axios from "axios";
 import { AddElementToShoppingList } from "../AddElementToShoppingList/AddElementToShoppingList";
 import "./ProductsList.scss";
 import { EventEmitter } from "../EventEmitter";
-import { Products } from '../files/products.json'
 
-//const API_URL = "https://api.mockaroo.com/api/ad8dc0f0?count=100&key=fc19d980";
+// published backend
+//const allProducts = "https://api.mockaroo.com/api/ad8dc0f0?count=100&key=fc19d980";
+
+//local backend
+const allProducts = "http://127.0.0.1:5000/product";
 
 export class ProductsList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showsToDisplay: Object.entries(Products) // nie jestem pewna czy to dobry pomysł
+      showsToDisplay: [],
+      products: []
+      
     };
 
     EventEmitter.subscribe("textChange", event => {
-      let showsToDisplay = Object.entries(Products).filter(show =>
-        show[1].product.toLowerCase().startsWith(event.toLowerCase())
+      let showsToDisplay = this.state.products.filter(show =>
+        show.name.toLowerCase().startsWith(event.toLowerCase())
       );
       this.setState({ showsToDisplay });
     });
   }
-  // for endpoint
-  // componentDidMount() {
-  //   axios
-  //     .get(API_URL)
-  //     .then(response => response.data)
-  //     .then(data => {
-  //       this.setState({
-  //         products: data,
-  //         showsToDisplay: data
-  //       });
-  //     });
-  // }
+  //for endpoint
+  componentDidMount() {
+    axios
+      .get(allProducts)
+      .then(response => response.data)
+      .then(data => {
+        this.setState({
+          products: data,
+          showsToDisplay: data
+        });
+      });
+  }
 
   render() {
     return (
       <div className="all-product-list">
         <div className="grid-container">
           {this.state.showsToDisplay.map((elList, index) => (
+            //console.log(elList)
             <AddElementToShoppingList
-              productId = { elList[0] }
-              product={elList[1].product}
-              price={elList[1].price}
-              discount={elList[1].discount}
-              discountValue={elList[1].discountValue}
-              photo={elList[1].photo}
+              productId = { elList.id }
+              name={elList.name}
+              price={elList.price}
+              discount={elList.discount}
+              discountValue={elList.discountValue}
+              photo={elList.photo}
               key={index}
             />
           ))}

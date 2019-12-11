@@ -8,7 +8,8 @@ import { EventEmitter } from "../EventEmitter";
 //const allProducts = "https://api.mockaroo.com/api/ad8dc0f0?count=100&key=fc19d980";
 
 //local backend
-const allProducts = "http://127.0.0.1:5000/product";
+// endpoint with all products -> method GET
+const allProducts = "http://127.0.0.1:5000/product"; 
 
 export class ProductsList extends React.Component {
   constructor(props) {

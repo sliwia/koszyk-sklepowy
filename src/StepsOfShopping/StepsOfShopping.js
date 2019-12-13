@@ -2,6 +2,7 @@ import React from 'react';
 import { Steps, Icon, Tooltip,Result } from 'antd';
 import './StepsOfShopping.scss';
 import { EventEmitter } from '../EventEmitter';
+import { ShoppingList } from '../ShoppingList/ShoppingList';
 
 const { Step } = Steps;
 
@@ -20,7 +21,7 @@ const steps = [
   {
     title: '',
     description: 'Zatwierdź listę zakupów',
-    content: 'Tu będzie lista zakupów',
+    content: <ShoppingList />,
     icon: 'shopping-cart',
   },
   {
@@ -46,7 +47,10 @@ export class StepsOfShopping extends React.Component {
     };
 
     EventEmitter.subscribe("visibilityBasket", event => {
-      this.setState({ showPopup: event });
+      this.setState({ 
+        showPopup: event,
+        current:0
+      });
     });
 
   }
@@ -114,7 +118,6 @@ export class StepsOfShopping extends React.Component {
         <div className="steps-content">
           {steps[current].content}
         </div>
-
         <div className="steps-btns">
           {prevButton}
           {nextButton}

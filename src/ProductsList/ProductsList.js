@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { AddElementToShoppingList } from "../AddElementToShoppingList/AddElementToShoppingList";
+import { AddProductToShop } from "../AddProductToShop/AddProductToShop";
 import "./ProductsList.scss";
 import { EventEmitter } from "../EventEmitter";
 
@@ -24,6 +24,7 @@ export class ProductsList extends React.Component {
       let showsToDisplay = this.state.products.filter(show =>
         show.name.toLowerCase().startsWith(event.toLowerCase())
       );
+      console.log(showsToDisplay)
       this.setState({ showsToDisplay });
     });
   }
@@ -45,8 +46,7 @@ export class ProductsList extends React.Component {
       <div className="all-product-list">
         <div className="grid-container">
           {this.state.showsToDisplay.map((elList, index) => (
-            //console.log(elList)
-            <AddElementToShoppingList
+            <AddProductToShop
               productId = { elList.id }
               name={elList.name}
               price={elList.price}

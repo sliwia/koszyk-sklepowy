@@ -1,14 +1,13 @@
 import React from "react";
 import { Tooltip, Icon } from "antd";
-import "./AddElementToShoppingList.scss";
+import "./AddProductToShop.scss";
 
 
-export class AddElementToShoppingList extends React.Component {
+export class AddProductToShop extends React.Component {
 
-  addProduct(e) {
+  addProduct = (elementId) =>  {
     // Reset item "selectedProductsIds"
     //localStorage.setItem('selectedProductsIds', '')
-
     let separator ='; ';
     if (localStorage.getItem("selectedProductsIds") === null) {
       localStorage.setItem('selectedProductsIds', '');
@@ -16,15 +15,17 @@ export class AddElementToShoppingList extends React.Component {
     if (localStorage.getItem("selectedProductsIds") === '') {
       separator = '';
     }
-    let selectedProductId = localStorage.getItem('selectedProductsIds') + separator + e.target.id;
+
+    let selectedProductId = localStorage.getItem('selectedProductsIds') + separator + elementId;
     localStorage.setItem('selectedProductsIds', selectedProductId);
+    
     //create list from string 
     // let productsStr = localStorage.getItem("selectedProductsIds");
     // let productsArray = productsStr.split("; ");
     // let productArryUniqueValue = [... new Set(productsArray)]
-
+    //console.log(localStorage.getItem('selectedProductsIds'))
     // console.log('productsArray',productsArray);
-    // console.log('productArryUniqueValue',productArryUniqueValue);
+    //console.log('productArryUniqueValue',productArryUniqueValue);
   }
 
   render() {
@@ -46,7 +47,7 @@ export class AddElementToShoppingList extends React.Component {
             {"  " + this.props.price + " zł"}
           </span>
           <Tooltip placement="right" title={"Dodaj do koszyka"}>
-            <div id={this.props.productId} className="btn-add-product" onClick={this.addProduct.bind(this)}>
+            <div id={this.props.productId} className="btn-add-product" onClick={this.addProduct.bind(this,this.props.productId)}>
                <Icon type="shopping-cart" style={{ fontSize: '25px', fontWeight: 'bold' }}/>
             </div>
           </Tooltip>

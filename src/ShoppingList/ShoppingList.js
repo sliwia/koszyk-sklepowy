@@ -21,6 +21,11 @@ export class ShoppingList extends React.Component {
   componentDidMount() {
     //create list from string 
     let productsStr = localStorage.getItem("selectedProductsIds");
+    
+    if (productsStr === null) {
+      return
+    }
+
     let productsArray = productsStr.split("; ");
     let productArryUniqueValue = [...new Set(productsArray)];
 

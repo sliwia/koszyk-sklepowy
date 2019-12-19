@@ -46,11 +46,25 @@ export class ShoppingList extends React.Component {
   render(){
     return (
     <div className ="shopping-list-content">
-        {
+        <table id="shopping-list-table">
+        <tr>
+          <th id="th--photo"></th>
+          <th>Nazwa</th>
+          <th>Ilość [ szt/kg/l ]</th>
+          <th>Cena [ zł ]</th>
+        </tr>
+          {
           this.state.selectedProducts.map((element, index )=> {
-          return (<div key={index} className="li-element"> <img src= {element.photo} alt={element.name} width="50px" height="50px" /><span>{element.name}</span> <span>Cena: {element.price} zł</span> </div>)
-        })
-        }
+            return (<tr key={index} className="li-element"> 
+                      <td><img src= {element.photo} alt={element.name} width="80px" height="60px" /></td> 
+                      <td>{element.name}</td> 
+                      <td>1</td>
+                      <td>{element.price}</td> 
+                    </tr>)
+          })
+          }
+        </table>
+        
       
     </div>
   );

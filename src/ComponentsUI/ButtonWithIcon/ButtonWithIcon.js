@@ -4,9 +4,9 @@ import './ButtonWithIcon.scss';
 
 
 export const ButtonWithIcon = (props) => {
-    return (
-    <>
-      <button><Icon type={ props.iconName } /> { props.buttonName }</button>
-    </>
-    );
+  return (
+  <>
+    <button className="btn-icon"><Icon type={ props.iconName } style={{ fontSize: props.iconSize }} /> { props.buttonName }</button>
+  </>
+  );
 }

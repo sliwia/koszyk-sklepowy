@@ -1,4 +1,5 @@
 import React from 'react';
+import { Divider } from 'antd';
 import './SubMenuContainer.scss';
 import { ShoppingBasketContainer } from './ShoppingBasketContainer/ShoppingBasketContainer';
 import { SearchContainer } from './SearchContainer/SearchContainer';
@@ -7,18 +8,16 @@ import { CategoriesContainer } from './CategoriesContainer/CategoriesContainer';
 
 
 export const SubMenuContainer = () => {
+  const diverStyle = {  color: 'white', padding: '0px 4px' }
+  
   return (
     <div className="sub-menu-container">
-      <div className="item-submenu-container">
+        <Divider orientation="left" style={diverStyle}>Zakupy</Divider>
         <ShoppingBasketContainer />
-      </div>
-      <div className="item-submenu-container">
+        <Divider orientation="left" style={diverStyle}>Wyszukiwanie</Divider>
         <SearchContainer />
-      </div>
-      <div className="item-submenu-container categ-container">
+        <Divider orientation="left" style={diverStyle}>Filtry dodatkowe</Divider>
         <CategoriesContainer />
-      </div>
-
     </div>
   );
 }

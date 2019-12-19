@@ -1,9 +1,10 @@
 @import '../../variables.scss';
 
 
-button{
+.btn-icon {
   position:relative;
-  height:60px;
+  height:50px;
+  width: 100%;
   background:$mainGreenColor;
   border:none;
   outline:none;
@@ -17,11 +18,10 @@ button{
   cursor:pointer;
 }
 
-button:hover{
+.btn-icon:hover{
   background:#fff;
   color: $mainGreenColor;
 }
 
+.btn-icon:active{background-color:rgb(122, 122, 122);}
 
-
-button:active{background-color:rgb(122, 122, 122);}

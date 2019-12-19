@@ -13,7 +13,7 @@ export const SearchContainer = () => {
   return (
   <>
   <div className="input-search-container">
-    <InputWithIcon iconType={"search"} type={"text"} placeholderText={"Wyszukaj"} onKeyUp={setProductFilter}/>   
+    <InputWithIcon iconType={"search"} type={"text"} placeholderText={"Wyszukaj produkt"} onKeyUp={setProductFilter}/>   
   </div>
   </>
   );

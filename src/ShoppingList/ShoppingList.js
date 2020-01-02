@@ -3,12 +3,17 @@ import axios from "axios";
 import './ShoppingList.scss'
 
 
-// published backend
-//const allProducts = "https://api.mockaroo.com/api/ad8dc0f0?count=100&key=fc19d980";
+// published backend (test)
+// const allProducts = "https://api.mockaroo.com/api/ad8dc0f0?count=100&key=fc19d980";
 
 //local backend
 // endpoint with all products -> method GET
-const allProducts = "http://127.0.0.1:5000/product"; 
+//const allProducts = "http://127.0.0.1:5000/product"; 
+
+
+// published backend (Server-1470151-1)
+// endpoint with all products -> method GET
+const allProducts = "http://46.41.138.226:5000/product";
 
 export class ShoppingList extends React.Component {
   constructor() {

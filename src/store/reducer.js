@@ -15,6 +15,8 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 countProducts: state.countProducts + 1
             }
+        default:
+            console.log("nothing")
     }
 
 

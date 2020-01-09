@@ -26,13 +26,13 @@ const steps = [
   },
   {
     title: 'test',
-    description: 'Opłata',
+    description: 'Metoda płatności',
     content: 'Dokonaj opłaty',
     icon: 'credit-card'
   },
   {
     title: 'test',
-    description: 'Zakupy zakończone',
+    description: 'Zapłać i zakończ ',
     content: 'Zakupy zakończone!',
     icon: 'check-circle'
   }
@@ -109,10 +109,10 @@ export class StepsOfShopping extends React.Component {
         </Steps>
 
         <div className="titles-content">
-          <span>Zaloguj się</span>
-          <span>Zatwierdź listę zakupów</span>
-          <span>Opłata</span>
-          <span>Zakupy zakończone</span>
+          <span>Logowanie</span>
+          <span>Lista zakupów</span>
+          <span>Metoda płatności</span>
+          <span>Płatność Koniec</span>
         </div>
 
         <div className="steps-content">

@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { AddProductToShop } from "../AddProductToShop/AddProductToShop";
+import AddProductToShop from "../AddProductToShop/AddProductToShop";
 import "./ProductsList.scss";
 import { EventEmitter } from "../EventEmitter";
 

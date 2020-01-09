@@ -16,10 +16,12 @@ export const ShoppingBasketContainer = () => {
     productsArray = productsStr.split("; ");
   }
   let productArryLength = [...new Set(productsArray)].length;
+  
   let sumOfProductsElement;
   if (productArryLength>0 && productsArray[0] !== "") {
     sumOfProductsElement = <div className="sum-of-products" >{productArryLength}</div>
   }
+
     return (
       <>
         <div className="shopping-button-container" onClick={showShoppingBasket}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import { InputNumber, Icon, Tooltip } from 'antd';
 import './ShoppingList.scss'
 
 
@@ -48,6 +49,11 @@ export class ShoppingList extends React.Component {
         });
       });
   }
+
+  onChange = (value) => {
+    console.log('changed', value);
+  }
+
   render(){
     return (
     <div className ="shopping-list-content">
@@ -55,16 +61,18 @@ export class ShoppingList extends React.Component {
         <tr>
           <th id="th--photo"></th>
           <th>Nazwa</th>
-          <th>Ilość [ szt/kg/l ]</th>
+          <th>Ilość</th>
           <th>Cena [ zł ]</th>
+          <th></th>
         </tr>
           {
           this.state.selectedProducts.map((element, index )=> {
             return (<tr key={index} className="li-element"> 
                       <td><img src= {element.photo} alt={element.name} width="80px" height="60px" /></td> 
                       <td>{element.name}</td> 
-                      <td>1</td>
+                      <td><InputNumber min={1} max={100} defaultValue={1} onChange={this.onChange} /></td>
                       <td>{element.price}</td> 
+                      <td><Tooltip placement="bottomRight" title={'Usuń produkt'}><div className="btn-del-product"> <Icon type="delete" /></div></Tooltip></td> 
                     </tr>)
           })
           }

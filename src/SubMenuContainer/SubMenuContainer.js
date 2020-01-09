@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider } from 'antd';
 import './SubMenuContainer.scss';
-import { ShoppingBasketContainer } from './ShoppingBasketContainer/ShoppingBasketContainer';
+import ShoppingBasketContainer  from './ShoppingBasketContainer/ShoppingBasketContainer';
 import { SearchContainer } from './SearchContainer/SearchContainer';
 import { CategoriesContainer } from './CategoriesContainer/CategoriesContainer';
 

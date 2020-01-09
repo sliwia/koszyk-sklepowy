@@ -10,6 +10,7 @@ const AddProductToShop = (props) => {
     // Reset item "selectedProductsIds"
     //localStorage.setItem('selectedProductsIds', '')
     props.onProductCounter();
+    props.onTempProductCounter();
    
     let separator ='; ';
     if (localStorage.getItem("selectedProductsIds") === null) {
@@ -22,8 +23,8 @@ const AddProductToShop = (props) => {
     let selectedProductId = localStorage.getItem('selectedProductsIds') + separator + elementId;
     localStorage.setItem('selectedProductsIds', selectedProductId);
 
-    console.log('ctr prop',props.ctr)
-    console.log('ctr prop',props.test)
+    // console.log('ctr prop',props.ctr)
+    // console.log('ctr prop',props.test)
   }
 
   
@@ -41,8 +42,6 @@ const AddProductToShop = (props) => {
         
         <div className="product-img" style={liStyle}></div>
         <span className="title">{props.name}</span>
-        {/* liczba dodawanych produktów, komponent renderuje się po zmianie liczby produktow w storze */}
-        <span>{props.ctr}</span>
         <span className="price">
           Cena:
           {"  " + props.price + " zł"}
@@ -61,14 +60,15 @@ const AddProductToShop = (props) => {
 
 const mapStateToProps = state => {
   return {
-    test: state.results,
+    test: state.tempCounterProduct,
     ctr: state.countProducts //ctr jest to nowy props stworzony dla komponentu, pobiera wartosci ze stanow na zewnatrz komponentu
   };
 }
 
 const mapDispatchToProps = dispatch =>{
   return {
-    onProductCounter: () => dispatch({type:'ADD_PRODUCT'})
+    onProductCounter: () => dispatch({type:'ADD_PRODUCT'}),
+    onTempProductCounter: () => dispatch({type:'ADD_NEXT_PRODUCT'}),
   };
 };
 

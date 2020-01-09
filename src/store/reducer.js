@@ -1,6 +1,15 @@
+let productsStr = localStorage.getItem("selectedProductsIds");
+let productsArray;
+if (productsStr === null || productsStr==='') {
+    productsArray = [];
+} else {
+    productsArray = productsStr.split("; ");
+}
+let productArryLength = [...new Set(productsArray)].length;
+
 const initialState = {
     countProducts: 0,
-    results: [1]
+    tempCounterProduct: productArryLength
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,13 +19,12 @@ const reducer = (state = initialState, action) => {
             const newState = Object.assign({}, state)
             newState.countProducts = state.countProducts +1;
             return newState;
-        case 'TEST':
-            return {
-                ...state,
-                countProducts: state.countProducts + 1
-            }
+        case 'ADD_NEXT_PRODUCT':
+            const newStateTempProduct = Object.assign({}, state)
+            newStateTempProduct.tempCounterProduct = state.tempCounterProduct +1;
+            return newStateTempProduct;
         default:
-            console.log("nothing")
+            console.log("not found action.type: "+ action.type)
     }
 
 

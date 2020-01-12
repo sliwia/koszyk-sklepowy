@@ -16,7 +16,7 @@ import { EventEmitter } from "../EventEmitter";
 // endpoint with all products -> method GET
 const allProducts = "http://46.41.138.226:5000/product";
 
-export class ProductsList extends React.Component {
+class ProductsList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,7 +51,13 @@ export class ProductsList extends React.Component {
     return (
       <div className="all-product-list">
         <div className="grid-container">
-          {this.state.showsToDisplay.map((elList, index) => (
+          {this.state.showsToDisplay.filter( element => {
+            return (element.category==='fruits' && this.props.shwFruits===true) ||
+                    (element.category==='vegetables' && this.props.shwVegetables===true) ||
+                    (element.category==='juices' && this.props.shwJuices===true )||
+                    (element.category==='dairy products' && this.props.shwDairyProducts===true)
+          })
+          .map((elList, index) => (
             <AddProductToShop
               productId = { elList.id }
               name={elList.name}
@@ -67,3 +73,15 @@ export class ProductsList extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    shwFruits: state.showFruits,
+    shwVegetables: state.showVegetables,
+    shwJuices: state.showJuices,
+    shwDairyProducts: state.showDairyProducts
+  };
+}
+
+
+export default connect(mapStateToProps)(ProductsList);

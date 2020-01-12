@@ -4,7 +4,7 @@ import "./App.scss";
 
 import { Header } from "./Header/Header";
 import { SubMenuContainer } from "./SubMenuContainer/SubMenuContainer";
-import { ProductsList } from "./ProductsList/ProductsList";
+import ProductsList from "./ProductsList/ProductsList";
 import { StepsOfShopping } from "./StepsOfShopping/StepsOfShopping";
 
 class App extends React.Component {

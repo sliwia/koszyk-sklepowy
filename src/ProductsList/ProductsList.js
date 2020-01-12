@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { connect } from 'react-redux';
 import AddProductToShop from "../AddProductToShop/AddProductToShop";
 import "./ProductsList.scss";
 import { EventEmitter } from "../EventEmitter";
@@ -28,7 +29,6 @@ export class ProductsList extends React.Component {
       let showsToDisplay = this.state.products.filter(show =>
         show.name.toLowerCase().startsWith(event.toLowerCase())
       );
-      console.log(showsToDisplay)
       this.setState({ showsToDisplay });
     });
   }
@@ -44,8 +44,10 @@ export class ProductsList extends React.Component {
         });
       });
   }
+  // let filterProductsArray = this.state.showsToDisplay.filter()
 
   render() {
+    
     return (
       <div className="all-product-list">
         <div className="grid-container">

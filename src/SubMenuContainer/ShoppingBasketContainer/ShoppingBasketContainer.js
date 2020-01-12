@@ -8,20 +8,10 @@ const ShoppingBasketContainer = (props) => {
   const showShoppingBasket = () => {
     EventEmitter.dispatch('visibilityBasket', 'true')
   }
-  // let productsStr = localStorage.getItem("selectedProductsIds");
-  // let productsArray;
-  // if (productsStr === null) {
-  //   productsArray = [];
-  // } else {
-  //   productsArray = productsStr.split("; ");
-  // }
-  // let productArryLength = [...new Set(productsArray)].length;
-  // if (props.sumOfProduct){
-    
-  // }
+  let sumOfProducts = [...new Set(props.arrayWithIds)].length;
   let sumOfProductsElement;
-  if (props.sumOfProduct>0) {
-    sumOfProductsElement = <div className="sum-of-products" >{props.sumOfProduct}</div>
+  if (sumOfProducts>0) {
+    sumOfProductsElement = <div className="sum-of-products" >{sumOfProducts}</div>
   }
 
   return (
@@ -37,7 +27,7 @@ const ShoppingBasketContainer = (props) => {
 
 const mapStateToProps = state => {
   return {
-    sumOfProduct: state.tempCounterProduct //sumOfProduct jest to nowy props stworzony dla komponentu, pobiera wartosci ze stanow na zewnatrz komponentu
+    arrayWithIds: state.productsIdsArray
   };
 }
 

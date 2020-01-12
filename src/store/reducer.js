@@ -1,3 +1,6 @@
+import * as actionTypes from './actions';
+
+
 let productsStr = localStorage.getItem("selectedProductsIds");
 let productsArray;
 if (productsStr === null || productsStr==='') {
@@ -5,24 +8,35 @@ if (productsStr === null || productsStr==='') {
 } else {
     productsArray = productsStr.split("; ");
 }
-let productArryLength = [...new Set(productsArray)].length;
+//let productArryLength = [...new Set(productsArray)].length;
 
 const initialState = {
-    countProducts: 0,
-    tempCounterProduct: productArryLength
+    productsIdsArray: productsArray,
+    showFruits: true,
+    showVegetables:true
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_PRODUCT':
+        case actionTypes.ADD_PRODUCT:
             // tworzymy nowy state kopiujac stare wartosci i modyfikujac pojedyńczy
             const newState = Object.assign({}, state)
             newState.countProducts = state.countProducts +1;
             return newState;
-        case 'ADD_NEXT_PRODUCT':
-            const newStateTempProduct = Object.assign({}, state)
-            newStateTempProduct.tempCounterProduct = state.tempCounterProduct +1;
-            return newStateTempProduct;
+        case actionTypes.ADD_NEXT_ID_TO_LOCALSTORAGE:
+            const newArrayWithIdsProducts = [...state.productsIdsArray]
+            const newIdStr = (action.newId).toString()
+            newArrayWithIdsProducts.push(newIdStr);
+            return {
+                ...state,
+                productsIdsArray: newArrayWithIdsProducts
+            }
+        case actionTypes.SHOW_FRUITS:
+            return {
+                ...state,
+                showFruits: action.showFruits
+            }
+            
         default:
             console.log("not found action.type: "+ action.type)
     }

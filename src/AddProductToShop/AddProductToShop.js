@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import { Tooltip, Icon } from "antd";
 import "./AddProductToShop.scss";
+import * as actionTypes from '../store/actions';
 
 
 const AddProductToShop = (props) => {
@@ -9,8 +10,7 @@ const AddProductToShop = (props) => {
   const addProductToLocalStrorage = (elementId) =>  {
     // Reset item "selectedProductsIds"
     //localStorage.setItem('selectedProductsIds', '')
-    props.onProductCounter();
-    props.onTempProductCounter();
+    props.onProductToLocalStrorage(elementId);
    
     let separator ='; ';
     if (localStorage.getItem("selectedProductsIds") === null) {
@@ -60,15 +60,13 @@ const AddProductToShop = (props) => {
 
 const mapStateToProps = state => {
   return {
-    test: state.tempCounterProduct,
-    ctr: state.countProducts //ctr jest to nowy props stworzony dla komponentu, pobiera wartosci ze stanow na zewnatrz komponentu
+    newIdsList: state.productsIdsArray,//ctr jest to nowy props stworzony dla komponentu, pobiera wartosci ze stanow na zewnatrz komponentu
   };
 }
 
 const mapDispatchToProps = dispatch =>{
   return {
-    onProductCounter: () => dispatch({type:'ADD_PRODUCT'}),
-    onTempProductCounter: () => dispatch({type:'ADD_NEXT_PRODUCT'}),
+    onProductToLocalStrorage: (id) => dispatch({type: actionTypes.ADD_NEXT_ID_TO_LOCALSTORAGE, newId: id})
   };
 };
 

@@ -3,3 +3,4 @@ export const SHOW_FRUITS = 'SHOW_FRUITS';
 export const SHOW_VEGETABLES = 'SHOW_VEGETABLES';
 export const SHOW_JUICES = 'SHOW_JUICES';
 export const SHOW_DAIRY_PRODUCTS = 'SHOW_DAIRY_PRODUCTS';
+export const SHOW_OILS = 'SHOW_OILS';

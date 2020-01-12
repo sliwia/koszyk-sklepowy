@@ -15,7 +15,8 @@ const initialState = {
     showFruits: true,
     showVegetables: true,
     showJuices: true,
-    showDairyProducts: true
+    showDairyProducts: true,
+    showOils:true
 }
 
 const reducer = (state = initialState, action) => {
@@ -46,7 +47,12 @@ const reducer = (state = initialState, action) => {
         case actionTypes.SHOW_DAIRY_PRODUCTS:
             return {
                 ...state,
-                showJuices: action.showDairyProducts
+                showDairyProducts: action.showDairyProducts
+            }
+        case actionTypes.SHOW_OILS:
+            return {
+                ...state,
+                showOils: action.showOils
             }
             
         default:

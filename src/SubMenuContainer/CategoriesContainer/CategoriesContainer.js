@@ -15,7 +15,9 @@ const CategoriesContainer = (props) => {
         props.onFilterDairyProducts(e.target.checked);
       } else if (e.target.id ==='juices') {
         props.onFilterJuices(e.target.checked);
-    }
+      } else if (e.target.id ==='oils') {
+        props.onFilterOils(e.target.checked);
+      }
         
     }
 
@@ -26,7 +28,7 @@ const CategoriesContainer = (props) => {
                 <div><Checkbox id="vegetables" onChange={onChange} defaultChecked={true} >Warzywa</Checkbox></div>
                 <div><Checkbox id="dairy-products" onChange={onChange} defaultChecked={true} >Nabiał</Checkbox></div>
                 <div><Checkbox id="juices" onChange={onChange} defaultChecked={true} >Soki</Checkbox></div>
-                <div><Checkbox defaultChecked={true} >Oleje</Checkbox></div>
+                <div><Checkbox id="oils" onChange={onChange} defaultChecked={true} >Oleje</Checkbox></div>
             </div>
 
         </>
@@ -43,7 +45,8 @@ const mapDispatchToProps = dispatch =>{
     onFilterFruit: (checked) => dispatch({type: actionTypes.SHOW_FRUITS, showFruits: checked}),
     onFilterVegetables: (checked) => dispatch({type: actionTypes.SHOW_VEGETABLES, showVegetables: checked}),
     onFilterJuices: (checked) => dispatch({type: actionTypes.SHOW_JUICES, showJuices: checked}),
-    onFilterDairyProducts: (checked) => dispatch({type: actionTypes.SHOW_DAIRY_PRODUCTS, showDairyProducts: checked})
+    onFilterDairyProducts: (checked) => dispatch({type: actionTypes.SHOW_DAIRY_PRODUCTS, showDairyProducts: checked}),
+    onFilterOils: (checked) => dispatch({type: actionTypes.SHOW_OILS, showOils: checked})
   };
 };
 

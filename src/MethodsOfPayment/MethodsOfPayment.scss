@@ -1,0 +1,65 @@
+@import "../variables.scss";
+
+.payments-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.payments-container h2 {
+    margin: 15px 0;
+    color:rgb(236, 234, 234);
+    font-size: 18px;
+}
+
+.btns-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+}
+
+.btn-payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    border: 2px solid darkgrey ;
+    margin: 50px;
+}
+
+.btn-payment span {
+    position: relative;
+    top: 10px;
+}
+
+.btn-payment:hover {
+    background: rgba(128, 128, 128, 0.5);
+    border: 3px solid $mainGreenColor;
+}
+
+.personal-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.item-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.item-form span {
+    padding: 5px;
+}

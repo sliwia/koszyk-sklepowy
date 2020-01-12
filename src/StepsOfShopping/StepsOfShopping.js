@@ -1,38 +1,23 @@
 import React from 'react';
-import { Steps, Icon, Tooltip,Result } from 'antd';
-import './StepsOfShopping.scss';
+import { Steps, Icon, Tooltip } from 'antd';
 import { EventEmitter } from '../EventEmitter';
 import { ShoppingList } from '../ShoppingList/ShoppingList';
+import { MethodsOfPayment } from '../MethodsOfPayment/MethodsOfPayment';
+import './StepsOfShopping.scss';
+
 
 const { Step } = Steps;
 
 const steps = [
   {
-    title: '',
-    description: 'Zaloguj się',
-    content: <Result
-    icon={<Icon type="user" />}
-    title="Zaloguj się!"
-    subTitle="Następnie kontynuuj zakupy"
-    
-  />,
-    icon: 'user',
-  },
-  {
-    title: '',
-    description: 'Zatwierdź listę zakupów',
     content: <ShoppingList />,
     icon: 'shopping-cart',
   },
   {
-    title: 'test',
-    description: 'Metoda płatności',
-    content: 'Dokonaj opłaty',
+    content: <MethodsOfPayment />,
     icon: 'credit-card'
   },
   {
-    title: 'test',
-    description: 'Zapłać i zakończ ',
     content: 'Zakupy zakończone!',
     icon: 'check-circle'
   }
@@ -109,10 +94,9 @@ export class StepsOfShopping extends React.Component {
         </Steps>
 
         <div className="titles-content">
-          <span>Logowanie</span>
-          <span>Lista zakupów</span>
+          <span>Szczegóły zakupów</span>
           <span>Metoda płatności</span>
-          <span>Płatność Koniec</span>
+          <span>Potwierdzenie</span>
         </div>
 
         <div className="steps-content">

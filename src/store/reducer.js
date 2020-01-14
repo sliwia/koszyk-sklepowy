@@ -1,14 +1,13 @@
 import * as actionTypes from './actions';
 
-
-let productsStr = localStorage.getItem("selectedProductsIds");
+let productsStr = localStorage.getItem("selectedProductsIdsObj");
 let productsArray;
-if (productsStr === null || productsStr==='') {
-    productsArray = [];
+if (productsStr===null || productsStr===undefined || productsStr==={}) {
+    productsArray=[]
 } else {
-    productsArray = productsStr.split("; ");
+    let productsObject = JSON.parse(productsStr);
+    productsArray = Object.keys(productsObject);
 }
-//let productArryLength = [...new Set(productsArray)].length;
 
 const initialState = {
     productsIdsArray: productsArray,
@@ -16,7 +15,8 @@ const initialState = {
     showVegetables: true,
     showJuices: true,
     showDairyProducts: true,
-    showOils:true
+    showOils:true,
+    showPopup:false
 }
 
 const reducer = (state = initialState, action) => {
@@ -25,9 +25,15 @@ const reducer = (state = initialState, action) => {
             const newArrayWithIdsProducts = [...state.productsIdsArray]
             const newIdStr = (action.newId).toString()
             newArrayWithIdsProducts.push(newIdStr);
+            const setWithProducts = [...new Set(newArrayWithIdsProducts)];
             return {
                 ...state,
-                productsIdsArray: newArrayWithIdsProducts
+                productsIdsArray: setWithProducts
+            }
+        case actionTypes.DEL_ID_ELEMENT:
+            return {
+                ...state,
+                productsIdsArray: action.prodsIdsArray
             }
         case actionTypes.SHOW_FRUITS:
             return {
@@ -53,6 +59,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 showOils: action.showOils
+            }
+        case actionTypes.SHOW_SHOPPING_BASKET_POPUP:
+            return {
+                ...state,
+                showPopup: action.showBasket
             }
             
         default:

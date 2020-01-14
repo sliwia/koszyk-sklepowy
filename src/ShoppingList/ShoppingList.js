@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from "axios";
+import { connect } from 'react-redux';
 import { InputNumber, Icon, Tooltip } from 'antd';
 import './ShoppingList.scss'
+import * as actionTypes from '../store/actions';
 
 
 // published backend (test)
@@ -16,27 +18,29 @@ import './ShoppingList.scss'
 // endpoint with all products -> method GET
 const allProducts = "http://46.41.138.226:5000/product";
 
-export class ShoppingList extends React.Component {
+class ShoppingList extends React.Component {
   constructor() {
     super();
     this.state = {
-      selectedProducts: []
+      selectedProducts: [],
+      dataAboutProducts:{},
+      updateList: false
     }
   }
 
   componentDidMount() {
-    //create list from string 
-    let productsStr = localStorage.getItem("selectedProductsIds");
+    let productsStr = localStorage.getItem("selectedProductsIdsObj");
     
     if (productsStr === null) {
       return
     }
 
-    let productsArray = productsStr.split("; ");
-    let productArryUniqueValue = [...new Set(productsArray)];
-
-    //console.log('productsArray',productsArray);
-    //console.log('productArryUniqueValue',productArryUniqueValue);
+    let productsArray = JSON.parse(productsStr);
+    this.setState({
+      dataAboutProducts: productsArray
+    })
+    let productArryUniqueValue = Object.keys(productsArray);
+    
     axios
       .get(allProducts)
       .then(response => response.data)
@@ -54,6 +58,23 @@ export class ShoppingList extends React.Component {
     console.log('changed', value);
   }
 
+  delProduct = (elementId) => {
+    let parseObjectWithProducts = JSON.parse(localStorage.getItem('selectedProductsIdsObj'));
+    delete parseObjectWithProducts[elementId]
+
+    let objToString = JSON.stringify(parseObjectWithProducts);
+    localStorage.setItem('selectedProductsIdsObj', objToString);
+    this.props.onDelElement(Object.keys(parseObjectWithProducts));
+    let newSelectedProductsListIds = Object.keys(parseObjectWithProducts);
+    let selectedProducts = this.state.selectedProducts.filter(product =>
+      newSelectedProductsListIds.includes((product.id).toString())>0
+    );
+    this.setState({
+      selectedProducts: selectedProducts
+    })
+
+  }
+
   render(){
     return (
     <div className ="shopping-list-content">
@@ -67,12 +88,13 @@ export class ShoppingList extends React.Component {
         </tr>
           {
           this.state.selectedProducts.map((element, index )=> {
-            return (<tr key={index} className="li-element"> 
+            let idPr = element.id;
+            return (<tr key={index} className="li-element">
                       <td><img src= {element.photo} alt={element.name} width="80px" height="60px" /></td> 
                       <td>{element.name}</td> 
-                      <td><InputNumber min={1} max={100} defaultValue={1} onChange={this.onChange} /></td>
+                      <td><InputNumber min={1} max={100} defaultValue={this.state.dataAboutProducts[idPr]} onChange={this.onChange} /></td>
                       <td>{element.price}</td> 
-                      <td><Tooltip placement="bottomRight" title={'Usuń produkt'}><div className="btn-del-product"> <Icon type="delete" /></div></Tooltip></td> 
+                      <td><Tooltip placement="bottomRight" title={'Usuń produkt'}><div className="btn-del-product" onClick={this.delProduct.bind(this, idPr)}> <Icon type="delete" /></div></Tooltip></td> 
                     </tr>)
           })
           }
@@ -84,3 +106,16 @@ export class ShoppingList extends React.Component {
   }
   
 }
+
+const mapStateToProps = state => {
+  return {
+  };
+}
+
+const mapDispatchToProps = dispatch =>{
+  return {
+    onDelElement: (list) => dispatch({type: actionTypes.DEL_ID_ELEMENT, prodsIdsArray: list})
+  };
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(ShoppingList)

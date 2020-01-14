@@ -53,7 +53,6 @@ class ProductsList extends React.Component {
         <div className="grid-container">
           {this.state.showsToDisplay.filter( element => {
             return (element.category==='fruits' && this.props.shwFruits===true) ||
-                    (element.category==='fruit' && this.props.shwFruits===true) ||
                     (element.category==='vegetables' && this.props.shwVegetables===true) ||
                     (element.category==='juices' && this.props.shwJuices===true )||
                     (element.category==='dairy products' && this.props.shwDairyProducts===true)||

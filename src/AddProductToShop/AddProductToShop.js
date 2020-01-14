@@ -8,23 +8,25 @@ import * as actionTypes from '../store/actions';
 const AddProductToShop = (props) => {
 
   const addProductToLocalStrorage = (elementId) =>  {
-    // Reset item "selectedProductsIds"
-    //localStorage.setItem('selectedProductsIds', '')
+    // Reset item "selectedProductsIdsObj"
+    //localStorage.setItem('selectedProductsIdsObj', '')
+
+    //for objects
+    if (localStorage.getItem('selectedProductsIdsObj') === null) {
+      localStorage.setItem('selectedProductsIdsObj', '{}'); // for objects
+    }
+    let parseObjectWithProducts = JSON.parse(localStorage.getItem('selectedProductsIdsObj'));
+    let newValue;
+    if (parseObjectWithProducts[elementId]!==undefined) {
+      newValue=parseObjectWithProducts[elementId];
+    } else {
+      newValue=0;
+    }
+    parseObjectWithProducts[elementId]= newValue + 1
+    let objToString = JSON.stringify(parseObjectWithProducts);
+    localStorage.setItem('selectedProductsIdsObj', objToString);
+
     props.onProductToLocalStrorage(elementId);
-   
-    let separator ='; ';
-    if (localStorage.getItem("selectedProductsIds") === null) {
-      localStorage.setItem('selectedProductsIds', '');
-    }
-    if (localStorage.getItem("selectedProductsIds") === '') {
-      separator = '';
-    }
-
-    let selectedProductId = localStorage.getItem('selectedProductsIds') + separator + elementId;
-    localStorage.setItem('selectedProductsIds', selectedProductId);
-
-    // console.log('ctr prop',props.ctr)
-    // console.log('ctr prop',props.test)
   }
 
   

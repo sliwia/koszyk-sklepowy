@@ -5,20 +5,28 @@ import "./App.scss";
 import { Header } from "./Header/Header";
 import { SubMenuContainer } from "./SubMenuContainer/SubMenuContainer";
 import ProductsList from "./ProductsList/ProductsList";
-import { StepsOfShopping } from "./StepsOfShopping/StepsOfShopping";
+import StepsOfShopping  from "./StepsOfShopping/StepsOfShopping";
+import { connect} from 'react-redux';
+
 
 class App extends React.Component {
   render() {
-    
     return (
       <>
         <Header />
         <SubMenuContainer />
         <ProductsList />
-        <StepsOfShopping />
+        {(this.props.shwPopup===true)?<StepsOfShopping />:<div></div>}
       </>
     );
   }
 };
 
-export default App
+const mapStateToProps = state => {
+  return {
+    shwPopup: state.showPopup,
+    
+  };
+}
+
+export default connect(mapStateToProps)(App);

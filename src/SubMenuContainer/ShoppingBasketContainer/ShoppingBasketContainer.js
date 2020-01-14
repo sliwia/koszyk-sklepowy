@@ -2,13 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './ShoppingBasketContainer.scss';
 import { ButtonWithIcon } from '../../ComponentsUI/ButtonWithIcon/ButtonWithIcon';
-import { EventEmitter } from '../../EventEmitter';
+import * as actionTypes from '../../store/actions';
 
 const ShoppingBasketContainer = (props) => {
-  const showShoppingBasket = () => {
-    EventEmitter.dispatch('visibilityBasket', 'true')
-  }
-  let sumOfProducts = [...new Set(props.arrayWithIds)].length;
+  let sumOfProducts = props.arrayWithIds.length;
   let sumOfProductsElement;
   if (sumOfProducts>0) {
     sumOfProductsElement = <div className="sum-of-products" >{sumOfProducts}</div>
@@ -16,7 +13,7 @@ const ShoppingBasketContainer = (props) => {
 
   return (
     <>
-      <div className="shopping-button-container" onClick={showShoppingBasket}>
+      <div className="shopping-button-container" onClick={()=>props.onShowBasket(true)}>
         { sumOfProductsElement }
         <ButtonWithIcon iconName={"shopping-cart"} buttonName={"Pokaż kosz"} iconSize={'30px'} />
       </div>
@@ -31,5 +28,12 @@ const mapStateToProps = state => {
   };
 }
 
+const mapDispatchToProps = dispatch =>{
+  return {
+    onShowBasket: (event) => dispatch({type: actionTypes.SHOW_SHOPPING_BASKET_POPUP, showBasket: event})
+  };
+};
 
-export default connect(mapStateToProps)(ShoppingBasketContainer);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShoppingBasketContainer);

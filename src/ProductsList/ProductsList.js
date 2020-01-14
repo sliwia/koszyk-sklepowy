@@ -44,7 +44,6 @@ class ProductsList extends React.Component {
         });
       });
   }
-  // let filterProductsArray = this.state.showsToDisplay.filter()
 
   render() {
     

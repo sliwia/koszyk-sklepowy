@@ -3,7 +3,6 @@
 
 .btn-icon {
   position:relative;
-  height:50px;
   width: 100%;
   background:$mainGreenColor;
   border:none;
@@ -21,6 +20,7 @@
 .btn-icon:hover{
   background:#fff;
   color: $mainGreenColor;
+  border:1px solid $mainGreenColor;
 }
 
 .btn-icon:active{background-color:rgb(122, 122, 122);}

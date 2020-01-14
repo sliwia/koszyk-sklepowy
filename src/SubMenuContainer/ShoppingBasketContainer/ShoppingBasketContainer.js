@@ -15,7 +15,7 @@ const ShoppingBasketContainer = (props) => {
     <>
       <div className="shopping-button-container" onClick={()=>props.onShowBasket(true)}>
         { sumOfProductsElement }
-        <ButtonWithIcon iconName={"shopping-cart"} buttonName={"Pokaż kosz"} iconSize={'30px'} />
+        <ButtonWithIcon iconName={"shopping-cart"} buttonName={"Pokaż kosz"} iconSize={'30px'} heightBtn={"50px"} fontSize={"18pt"}/>
       </div>
     </>
   );

@@ -14,7 +14,7 @@ export const MethodsOfPayment = (props) => {
                 <h2>Wybierz metodę płatności</h2>
                 <div className="btns-group">
                     <div className="btn-payment">
-                    <img src={DotpayLogo} alt="dotpay-logo" width={120} height={80}/>
+                    <img src={DotpayLogo} alt="dotpay-logo" width={140} height={80}/>
                     <span>DotPay</span>
                     </div>
                     <div className="btn-payment">

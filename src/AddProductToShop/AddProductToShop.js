@@ -1,17 +1,13 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Tooltip, Icon } from "antd";
-import "./AddProductToShop.scss";
+import { Tooltip, Icon, notification } from 'antd';
+import './AddProductToShop.scss';
 import * as actionTypes from '../store/actions';
-
+import { ButtonWithIcon } from '../ComponentsUI/ButtonWithIcon/ButtonWithIcon';
 
 const AddProductToShop = (props) => {
 
   const addProductToLocalStrorage = (elementId) =>  {
-    // Reset item "selectedProductsIdsObj"
-    //localStorage.setItem('selectedProductsIdsObj', '')
-
-    //for objects
     if (localStorage.getItem('selectedProductsIdsObj') === null) {
       localStorage.setItem('selectedProductsIdsObj', '{}'); // for objects
     }
@@ -27,7 +23,31 @@ const AddProductToShop = (props) => {
     localStorage.setItem('selectedProductsIdsObj', objToString);
 
     props.onProductToLocalStrorage(elementId);
+    openNotification()
   }
+
+  const openNotification = () => {
+    const key = `open${Date.now()}`;
+    const btn = (
+      <ButtonWithIcon iconName={"shopping-cart"} buttonName={"Pokaż kosz"} iconSize={"0"} heightBtn={"30px"} fontSize={"11pt"} />
+    );
+    notification.open({
+      message: 'Dodano produkt',
+      description:
+        'Dodano kolejny produkt do kosza: '+props.name.toLowerCase()+'.',
+      // placement:'bottomLeft',
+      btn,
+      key,
+      onClose: close,
+      
+    });
+  };
+
+  const close = () => {
+    console.log(
+      'Notification was closed. Either the close button was clicked or duration time elapsed.',
+    );
+  };
 
   
   let discount;

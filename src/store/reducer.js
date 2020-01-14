@@ -1,9 +1,11 @@
 import * as actionTypes from './actions';
 
 let productsStr = localStorage.getItem("selectedProductsIdsObj");
+console.log(localStorage.getItem("selectedProductsIdsObj"));
 let productsArray;
-if (productsStr===null || productsStr===undefined || productsStr==={}) {
-    productsArray=[]
+if (productsStr===null || productsStr===undefined || productsStr==='') {
+    productsArray=[];
+    localStorage.setItem('selectedProductsIdsObj', '{}');
 } else {
     let productsObject = JSON.parse(productsStr);
     productsArray = Object.keys(productsObject);

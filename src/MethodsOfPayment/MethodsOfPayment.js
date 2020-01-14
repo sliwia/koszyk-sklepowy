@@ -1,6 +1,6 @@
 import React from 'react';
 import './MethodsOfPayment.scss';
-import DotpayLogo from '../files/dotpay_materialy_graficzne/Logo Dotpay_1312x500.png';
+import DotpayLogo from '../files/payu_materialy_graficzne/logo_dotpay.png';
 import PayuLogo from '../files/payu_materialy_graficzne/payu.png';
 import PayLogo from '../files/payu_materialy_graficzne/pay.png';
 import { InputWithIcon } from '../ComponentsUI/InputWithIcon/InputWithIcon';

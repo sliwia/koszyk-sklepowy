@@ -54,8 +54,11 @@ class ShoppingList extends React.Component {
       });
   }
 
-  onChange = (value) => {
-    console.log('changed', value);
+  onChange = (elementId) =>(newValue)=> {
+    let parseObjectWithProducts = JSON.parse(localStorage.getItem('selectedProductsIdsObj'));
+    parseObjectWithProducts[elementId]= newValue;
+    let objToString = JSON.stringify(parseObjectWithProducts);
+    localStorage.setItem('selectedProductsIdsObj', objToString);
   }
 
   delProduct = (elementId) => {
@@ -92,7 +95,7 @@ class ShoppingList extends React.Component {
             return (<tr key={index} className="li-element">
                       <td><img src= {element.photo} alt={element.name} width="80px" height="60px" /></td> 
                       <td>{element.name}</td> 
-                      <td><InputNumber min={1} max={100} defaultValue={this.state.dataAboutProducts[idPr]} onChange={this.onChange} /></td>
+                      <td><InputNumber id={idPr} min={1} max={100} defaultValue={this.state.dataAboutProducts[idPr]} onChange={this.onChange(idPr)} /></td>
                       <td>{element.price}</td> 
                       <td><Tooltip placement="bottomRight" title={'Usuń produkt'}><div className="btn-del-product" onClick={this.delProduct.bind(this, idPr)}> <Icon type="delete" /></div></Tooltip></td> 
                     </tr>)

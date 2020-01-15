@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Steps, Icon, Tooltip } from 'antd';
  import { connect } from 'react-redux';
 import ShoppingList from '../ShoppingList/ShoppingList';
@@ -23,77 +23,67 @@ const steps = [
   }
 ];
 
-class StepsOfShopping extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      current: 0,
-      showPopup: false
-    };
+const StepsOfShopping = (props) =>{
+  const [current, setCurrent] = useState(0);
+  
+  const next = () => {
+    setCurrent(current + 1)
   }
 
-  next() {
-    const current = this.state.current + 1;
-    this.setState({ current });
+  const prev = () => {
+    setCurrent(current - 1)
   }
 
-  prev() {
-    const current = this.state.current - 1;
-    this.setState({ current });
+  const closePopup = () => {
+    props.onShowBasket(false)
   }
 
-  closePopup() {
-    this.props.onShowBasket(false)
+  const currentStep = current;
+  let prevButton = <div></div>;
+  let nextButton = <div></div>;
+
+  if (currentStep > 0) {
+    prevButton = <div onClick={() => prev()} ><Icon type="left" /> Wstecz</div>
   }
 
-  render() {
-    const { current } = this.state;
-    let prevButton = <div></div>;
-    let nextButton = <div></div>;
-
-    if (current > 0) {
-      prevButton = <div onClick={() => this.prev()} ><Icon type="left" /> Wstecz</div>
-    }
-
-    if (current < steps.length - 1) {
-      nextButton = <div onClick={() => this.next()}>Dalej <Icon type="right" /></div>
-    }
-    return (
-      <div className="steps-container" >
-        <Tooltip placement="bottom" title={"Zamknij"}>
-          <div className="btn-close" onClick={this.closePopup.bind(this)}>
-            <Icon type="close-square" style={{ fontSize: '27px', color: 'white' }} />
-          </div>
-        </Tooltip>
-        
-        <div className="header-content">
-          <h1>
-            Moje zakupy
-          </h1>
+  if (currentStep < steps.length - 1) {
+    nextButton = <div onClick={() => next()}>Dalej <Icon type="right" /></div>
+  }
+  return (
+    <div className="steps-container" >
+      <Tooltip placement="bottom" title={"Zamknij"}>
+        <div className="btn-close" onClick={() => closePopup()}>
+          <Icon type="close-square" style={{ fontSize: '27px', color: 'white' }} />
         </div>
-
-        <Steps current={current}>
-          {steps.map((index, i = 1) => (
-            <Step key={current + i++} icon={<Icon type={index.icon} />} />
-          ))}
-        </Steps>
-
-        <div className="titles-content">
-          <span>Szczegóły zakupów</span>
-          <span>Metoda płatności</span>
-          <span>Potwierdzenie</span>
-        </div>
-
-        <div className="steps-content">
-          {steps[current].content}
-        </div>
-        <div className="steps-btns">
-          {prevButton}
-          {nextButton}
-        </div>
+      </Tooltip>
+      
+      <div className="header-content">
+        <h1>
+          Moje zakupy
+        </h1>
       </div>
-    );
-  }
+
+      <Steps current={currentStep}>
+        {steps.map((index, i = 1) => (
+          <Step key={currentStep + i++} icon={<Icon type={index.icon} />} />
+        ))}
+      </Steps>
+
+      <div className="titles-content">
+        <span>Szczegóły zakupów</span>
+        <span>Metoda płatności</span>
+        <span>Potwierdzenie</span>
+      </div>
+
+      <div className="steps-content">
+        {steps[current].content}
+      </div>
+      <div className="steps-btns">
+        {prevButton}
+        {nextButton}
+      </div>
+    </div>
+  );
 }
 
 const mapStateToProps = state => {

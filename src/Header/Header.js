@@ -3,7 +3,7 @@ import './Header.scss';
 import { InputWithIcon } from '../ComponentsUI/InputWithIcon/InputWithIcon';
 import { WhiteButton } from '../ComponentsUI/WhiteButton/WhiteButton';
 import Logo from "../files/groceries.png";
-
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   
@@ -17,7 +17,7 @@ export const Header = () => {
       <div className="login-container">
         <InputWithIcon iconType={"user"} type={"text"} placeholderText={"Login"} />
         <InputWithIcon iconType={"lock"} type={"password"} placeholderText={"Hasło"} />
-        <WhiteButton buttonName={"Zaloguj"} />
+        <Link to="/admin"><WhiteButton buttonName={"Zaloguj"} /></Link>
       </div>
       
     </div>

@@ -1,9 +1,9 @@
 import React from "react";
-import axios from "axios";
 import { connect } from 'react-redux';
 import AddProductToShop from "../AddProductToShop/AddProductToShop";
 import "./ProductsList.scss";
 import { EventEmitter } from "../EventEmitter";
+import * as actionTypes from '../store/actions';
 
 // published backend
 // const allProducts = "https://api.mockaroo.com/api/ad8dc0f0?count=100&key=fc19d980";
@@ -14,7 +14,7 @@ import { EventEmitter } from "../EventEmitter";
 
 // published backend (Server-1470151-1)
 // endpoint with all products -> method GET
-const allProducts = "http://46.41.138.226:5000/product";
+//const allProducts = "http://46.41.138.226:5000/product";
 
 class ProductsList extends React.Component {
   constructor(props) {
@@ -26,7 +26,8 @@ class ProductsList extends React.Component {
     };
 
     EventEmitter.subscribe("textChange", event => {
-      let showsToDisplay = this.state.products.filter(show =>
+      let showsToDisplay = this.state.showsToDisplay.filter(show =>
+
         show.name.toLowerCase().startsWith(event.toLowerCase())
       );
       this.setState({ showsToDisplay });
@@ -34,23 +35,15 @@ class ProductsList extends React.Component {
   }
   //for endpoint
   componentDidMount() {
-    axios
-      .get(allProducts)
-      .then(response => response.data)
-      .then(data => {
-        this.setState({
-          products: data,
-          showsToDisplay: data
-        });
-      });
+      this.props.onGetAllProducts();
   }
 
   render() {
-    
+   
     return (
       <div className="all-product-list">
         <div className="grid-container">
-          {this.state.showsToDisplay.filter( element => {
+          {this.props.getProducts.filter( element => {
             return (element.category==='fruits' && this.props.shwFruits===true) ||
                     (element.category==='vegetables' && this.props.shwVegetables===true) ||
                     (element.category==='juices' && this.props.shwJuices===true )||
@@ -80,9 +73,16 @@ const mapStateToProps = state => {
     shwVegetables: state.showVegetables,
     shwJuices: state.showJuices,
     shwDairyProducts: state.showDairyProducts,
-    shwOils: state.showOils
+    shwOils: state.showOils,
+    getProducts: state.getAllProducts
   };
 }
 
+const mapDispatchToProps = dispatch =>{
+  return {
+    onGetAllProducts: () => dispatch(actionTypes.initProducts())
+  };
+};
 
-export default connect(mapStateToProps)(ProductsList);
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsList);

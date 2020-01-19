@@ -1,0 +1,48 @@
+.admin-container {
+    padding: 20px 0;
+}
+
+.admin-container button {
+    height: 40px;
+    padding: 5px 20px;
+}
+
+.admin-container h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-add {
+    margin: 20px 40%;
+}
+
+#admin-main-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#admin-main-table td, #admin-main-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#admin-main-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#admin-main-table tr:hover {background-color: #ddd;}
+
+#admin-main-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1890ff;
+    color: white;
+}
+
+.btn-return {
+    position: fixed !important;
+    top: 10px;
+    left: 10px;
+}

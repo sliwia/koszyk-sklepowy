@@ -17,8 +17,10 @@ const initialState = {
     showVegetables: true,
     showJuices: true,
     showDairyProducts: true,
-    showOils:true,
-    showPopup:false
+    showOils: true,
+    showPopup: false,
+    getAllProducts: [],
+    showEditProductModal: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -67,25 +69,36 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 showPopup: action.showBasket
             }
+        case actionTypes.GET_ALL_PRODUCTS:
+            return {
+                ...state,
+                getAllProducts: action.getAllProducts
+            }
+        case actionTypes.POST_SINGLE_PRODUCT:
+            let tempNewProductListPost = state.getAllProducts;
+            tempNewProductListPost.push(action.newObj)
+            return {
+                ...state,
+                getAllProducts: tempNewProductListPost
+            }
+        case actionTypes.DEL_SINGLE_PRODUCT:
+            let tempProductListDel = state.getAllProducts;
+            let tempNewProductListDel = tempProductListDel.filter( element => {
+                return element.id !==action.idPr
+            })
+            return {
+                ...state,
+                getAllProducts: tempNewProductListDel
+            }
+        case actionTypes.SHOW_EDIT_PRODUCT_MODAL:
+                return {
+                    ...state,
+                    showEditProductModal: !state.showEditProductModal
+                }
             
         default:
             console.log("not found action.type: " + action.type)
     }
-
-
-
-    // mozna tez za pomoca zwykłych warunków:
-    // if (action.type === 'ADD_PRODUCT') {
-    //     return{
-    //         ...state,
-    //         countProducts: state.countProducts + 1
-    //     };
-    // }
-    // case actionTypes.ADD_PRODUCT:
-    //     tworzymy nowy state kopiujac stare wartosci i modyfikujac pojedyńczy
-    //     const newState = Object.assign({}, state)
-    //     newState.countProducts = state.countProducts +1;
-    //     return newState;
     return state;
 }
 

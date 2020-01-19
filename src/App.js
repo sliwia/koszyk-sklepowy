@@ -1,32 +1,25 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import ShopView from "./ShopView/ShopView";
+import AdminPanelView from "./AdminPanelView/AdminPanelView";
 import "antd/dist/antd.css";
 import "./App.scss";
 
-import { Header } from "./Header/Header";
-import { SubMenuContainer } from "./SubMenuContainer/SubMenuContainer";
-import ProductsList from "./ProductsList/ProductsList";
-import StepsOfShopping  from "./StepsOfShopping/StepsOfShopping";
-import { connect} from 'react-redux';
 
 
 class App extends React.Component {
   render() {
     return (
       <>
-        <Header />
-        <SubMenuContainer />
-        <ProductsList />
-        {(this.props.shwPopup===true)?<StepsOfShopping />:<div></div>}
+        <Router>
+            <Route exact path="/" component={ShopView}></Route>
+            <Route path="/admin" component={AdminPanelView}></Route>
+        </Router>
       </>
     );
   }
 };
 
-const mapStateToProps = state => {
-  return {
-    shwPopup: state.showPopup,
-    
-  };
-}
 
-export default connect(mapStateToProps)(App);
+
+export default App;

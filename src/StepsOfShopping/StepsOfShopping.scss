@@ -86,24 +86,24 @@
 
 }
 
-.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+.steps-container .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
     font-size: 18px;
     color: $mainGreenColor;
 }
 
-.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+.steps-container .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
     color: $lightgrayColor;
 }
 
-.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+.steps-container .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
     color: $mainGreenColor;
 }
-.ant-steps-item-custom.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon {
+.steps-container .ant-steps-item-custom.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon {
     color: $mainGreenColor;
     font-size: 35px;
 }
 
-.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+.steps-container .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
     background-color: $mainGreenColor;
     height: 3px;
 

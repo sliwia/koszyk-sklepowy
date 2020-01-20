@@ -41,16 +41,13 @@ export const initProducts = () => {
 };
 
 export const addNewProduct = (newProductObj) => {
-   axios.post( 'http://46.41.138.226:5000/product',newProductObj);
-    // axios({
-    //     method: 'post',
-    //     url: 'http://46.41.138.226:5000/product',
-    //     headers: {},
-    //     data: JSON.stringify(newProductObj)
-    // });
-      
-    //axios.post('http://46.41.138.226:5000/product', newProductObj,{headers: {'Accept': 'application/json'}})
-    
+    const data = newProductObj;
+    const headers = {
+        'Content-Type': 'application/json'
+    }
+    axios.post('http://46.41.138.226:5000/product', JSON.stringify(data), {
+        headers: headers
+    })
 
     return {
         type: POST_SINGLE_PRODUCT,

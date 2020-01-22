@@ -1,3 +1,16 @@
+# Koszyk sklepowy
+
+## Technologies
+Project is created with:
+
+  * React (version ^16.9.0)
+  * React Redux (version ^7.1.3, Redux version ^4.0.5, Redux Thunk version ^2.3.0)
+  * React Router (version ^5.1.2)
+  * Antd (version ^3.23.2)
+  * Node Sass (version ^4.13.1)
+  * Axios (^0.19.0)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

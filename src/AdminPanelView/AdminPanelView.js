@@ -9,6 +9,7 @@ import AdminPanelModal from "../AdminPanelModal/AdminPanelModal";
 const { confirm } = Modal;
 
 const AdminPanelView = (props) => {
+    // const [isProductEdit, setIsProductEdit] = useState(false);
 
     useEffect(() => {
         props.onGetAllProducts();
@@ -20,7 +21,7 @@ const AdminPanelView = (props) => {
             content: 'Czy na pewno chcesz usunąć produkt: ' + name.toLowerCase() + '?',
             okText: 'Tak',
             okType: 'danger',
-            cancelText: 'Nie',            
+            cancelText: 'Nie',
 
             onOk() {
                 // dodac usuwanie z localstorage
@@ -33,6 +34,11 @@ const AdminPanelView = (props) => {
     }
     const showAdminModal = () => {
         props.onShowModal();
+    }
+
+    const showAdminModalAndEditProduct = () => {
+        props.onShowModal();
+        props.onIsEditProduct();
     }
     
     return (
@@ -49,7 +55,7 @@ const AdminPanelView = (props) => {
                     <th>Promocja</th>
                     <th>Promocja [%]</th>
                     <th>Zdjęcie</th>
-                    {/* <th>Edytuj</th> */}
+                    <th>Edytuj</th>
                     <th>Usuń</th>
                 </tr>
                 {props.allProducts.map((elList, index) => {
@@ -60,7 +66,7 @@ const AdminPanelView = (props) => {
                             <td>{ elList.discount ===false ? "NIE": "TAK" }</td>
                             <td>{elList.discountValue ===null? "": elList.discountValue}</td>
                             <td>{elList.photo}</td>
-                            {/* <td><Button>Edytuj</Button></td> */}
+                            <td><Button onClick={showAdminModalAndEditProduct.bind(this,elList.id)}>Edytuj</Button></td>
                             <td><Button onClick={showDeleteConfirm.bind(this,elList.id, elList.name)}>Usuń</Button></td>
                         </tr>
                     )
@@ -84,7 +90,8 @@ const mapDispatchToProps = dispatch =>{
     return {
         onGetAllProducts: () => dispatch(actionTypes.initProducts()),
         onDelProduct: (id) => dispatch(actionTypes.delProduct(id)),
-        onShowModal: () => dispatch({type: actionTypes.SHOW_EDIT_PRODUCT_MODAL})
+        onShowModal: () => dispatch({type: actionTypes.SHOW_EDIT_PRODUCT_MODAL}),
+        onIsEditProduct: () =>dispatch({type: actionTypes.IS_EDIT_PRODUCT})
     };
   };
 

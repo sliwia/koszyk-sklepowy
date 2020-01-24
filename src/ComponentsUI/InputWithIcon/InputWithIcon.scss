@@ -1,14 +1,18 @@
 @import '../../variables.scss';
 
-.icon { 
+.input-icons .icon { 
   position: absolute;
   padding: 10px;
   font-size: 15px;
   color: $grayColor; 
 } 
 
-.input-field { 
-  // width: 100%; 
+.input-icons {
+  width: 100%; 
+}
+
+.input-icons .input-field { 
+  width: 100%;
   height: $heightElement;
   border-radius: 5px;
   border: none;

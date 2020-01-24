@@ -20,17 +20,11 @@ class ProductsList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showsToDisplay: [],
-      products: []
-      
+      filterText:''
     };
 
     EventEmitter.subscribe("textChange", event => {
-      let showsToDisplay = this.state.showsToDisplay.filter(show =>
-
-        show.name.toLowerCase().startsWith(event.toLowerCase())
-      );
-      this.setState({ showsToDisplay });
+      this.setState({ filterText: event.toLowerCase() });
     });
   }
   //for endpoint
@@ -39,16 +33,17 @@ class ProductsList extends React.Component {
   }
 
   render() {
-   
     return (
       <div className="all-product-list">
         <div className="grid-container">
           {this.props.getProducts.filter( element => {
-            return (element.category==='fruits' && this.props.shwFruits===true) ||
+            return ((element.category==='fruits' && this.props.shwFruits===true) ||
                     (element.category==='vegetables' && this.props.shwVegetables===true) ||
                     (element.category==='juices' && this.props.shwJuices===true )||
                     (element.category==='dairy products' && this.props.shwDairyProducts===true)||
-                    (element.category==='oil' && this.props.shwOils===true)
+                    (element.category==='oil' && this.props.shwOils===true)) &&
+                    (element.name.toLowerCase().startsWith(this.state.filterText))
+                    
           })
           .map((elList, index) => (
             <AddProductToShop

@@ -20,7 +20,8 @@ const initialState = {
     showOils: true,
     showPopup: false,
     getAllProducts: [],
-    showEditProductModal: false
+    showEditProductModal: false,
+    isEditProduct: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -81,6 +82,10 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 getAllProducts: tempNewProductListPost
             }
+        case actionTypes.PUT_SINGLE_PRODUCT:
+            return {
+                ...state,
+            }
         case actionTypes.DEL_SINGLE_PRODUCT:
             let tempProductListDel = state.getAllProducts;
             let tempNewProductListDel = tempProductListDel.filter( element => {
@@ -95,6 +100,11 @@ const reducer = (state = initialState, action) => {
                     ...state,
                     showEditProductModal: !state.showEditProductModal
                 }
+        case actionTypes.IS_EDIT_PRODUCT:
+            return {
+                ...state,
+                isEditProduct: !state.isEditProduct
+            }
             
         default:
             console.log("not found action.type: " + action.type)

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Tooltip, Icon, notification } from 'antd';
 import './AddProductToShop.scss';
 import * as actionTypes from '../store/actions';
-import { ButtonWithIcon } from '../ComponentsUI/ButtonWithIcon/ButtonWithIcon';
+// import { ButtonWithIcon } from '../ComponentsUI/ButtonWithIcon/ButtonWithIcon';
 
 const AddProductToShop = (props) => {
 
@@ -28,15 +28,15 @@ const AddProductToShop = (props) => {
 
   const openNotification = () => {
     const key = `open${Date.now()}`;
-    const btn = (
-      <ButtonWithIcon iconName={"shopping-cart"} buttonName={"Pokaż kosz"} iconSize={"0"} heightBtn={"30px"} fontSize={"11pt"} />
-    );
+    // const btn = (
+    //   <ButtonWithIcon iconName={"shopping-cart"} buttonName={"Pokaż kosz"} iconSize={"0"} heightBtn={"30px"} fontSize={"11pt"} />
+    // );
     notification.open({
       message: 'Dodano produkt',
       description:
         'Dodano kolejny produkt do kosza: '+props.name.toLowerCase()+'.',
       // placement:'bottomLeft',
-      btn,
+      // btn, 
       key,
       onClose: close,
       

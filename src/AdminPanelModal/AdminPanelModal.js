@@ -134,9 +134,9 @@ class AdminPanelModal extends React.Component  {
                         >
                         {getFieldDecorator('discount', {
                             rules: [{ required: true, message: 'Wybierz czy produkt jest promocyjny' }],
-                        })(<Select defaultValue="false" style={{ width: 200 }}>
-                            <Option value="false">NIE</Option>
-                            <Option value="true">TAK</Option>
+                        })(<Select defaultValue={false} style={{ width: 200 }}>
+                            <Option value={false}>NIE</Option>
+                            <Option value={true}>TAK</Option>
                           </Select>)}
                     </Form.Item>
 

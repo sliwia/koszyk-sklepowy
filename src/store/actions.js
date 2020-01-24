@@ -14,6 +14,7 @@ export const POST_SINGLE_PRODUCT = 'POST_SINGLE_PRODUCT';
 export const PUT_SINGLE_PRODUCT = 'PUT_SINGLE_PRODUCT';
 export const DEL_SINGLE_PRODUCT = 'DEL_SINGLE_PRODUCT';
 export const SHOW_EDIT_PRODUCT_MODAL = 'SHOW_EDIT_PRODUCT_MODAL';
+export const IS_EDIT_PRODUCT = 'IS_EDIT_PRODUCT';
 
 export const setProducts = ( action, products ) => {
     return {
@@ -41,13 +42,8 @@ export const initProducts = () => {
 };
 
 export const addNewProduct = (newProductObj) => {
-    const data = newProductObj;
-    const headers = {
-        'Content-Type': 'application/json'
-    }
-    axios.post('http://46.41.138.226:5000/product', JSON.stringify(data), {
-        headers: headers
-    })
+    axios.post('http://46.41.138.226:5000/product', newProductObj)
+    .then(resp => {console.log(resp)})
 
     return {
         type: POST_SINGLE_PRODUCT,
